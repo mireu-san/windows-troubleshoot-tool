@@ -1,0 +1,326 @@
+{
+  "target": "windows/amd64",
+  "cgo": false,
+  "tags": "desktop,wv2runtime.browser,production",
+  "go_version": "go1.27.1",
+  "components": [
+    {
+      "name": "Go runtime and standard library",
+      "version": "go1.27.1",
+      "scope": "Runtime source notices, including selected package/vendor notices. CGO and BoringCrypto are disabled; any BoringSSL notice is retained conservatively for that source package.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        },
+        {
+          "path": "PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc"
+        },
+        {
+          "path": "src/crypto/internal/boring/LICENSE",
+          "sha256": "56210f826b8f0fbac3160dfe55c97f4019eb6cdda3963b5a0eab8a8bdb62360e"
+        },
+        {
+          "path": "src/vendor/golang.org/x/crypto/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        },
+        {
+          "path": "src/vendor/golang.org/x/crypto/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc"
+        },
+        {
+          "path": "src/vendor/golang.org/x/net/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        },
+        {
+          "path": "src/vendor/golang.org/x/net/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc"
+        },
+        {
+          "path": "src/vendor/golang.org/x/sys/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        },
+        {
+          "path": "src/vendor/golang.org/x/sys/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc"
+        },
+        {
+          "path": "src/vendor/golang.org/x/text/LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        },
+        {
+          "path": "src/vendor/golang.org/x/text/PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc"
+        }
+      ]
+    },
+    {
+      "name": "git.sr.ht/~jackmordaunt/go-toast/v2",
+      "version": "v2.0.3",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "1b57eeb121b97d5920085fddd4cf395e71b8b027051a367bec8228688d68292f"
+        }
+      ]
+    },
+    {
+      "name": "github.com/bep/debounce",
+      "version": "v1.2.1",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "77d1b21a5460ffc70d50101e9490a44b35dd713dab8a6f847c54ce4d3e81234a"
+        }
+      ]
+    },
+    {
+      "name": "github.com/go-ole/go-ole",
+      "version": "v1.3.0",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "d883dbca28769ff23dd4368a8edb7ad9f9f23a8f86adde2875c6e41a828aac62"
+        }
+      ]
+    },
+    {
+      "name": "github.com/google/uuid",
+      "version": "v1.6.0",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "0a8d61ed3cbfd5312326e8126c31ce9c627a283adc99131b56896d29ada04b2d"
+        }
+      ]
+    },
+    {
+      "name": "github.com/leaanthony/go-ansi-parser",
+      "version": "v1.6.1",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "d0817a3112cb46c57b987f58db0d8c71ca99f26d448a351073e3d69b6702e541"
+        }
+      ]
+    },
+    {
+      "name": "github.com/leaanthony/slicer",
+      "version": "v1.6.0",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "6ec71bfac83b3a260158e53408a81392f84982fe19c43b4c2b6e2b6f0b44457b"
+        }
+      ]
+    },
+    {
+      "name": "github.com/leaanthony/u",
+      "version": "v1.1.1",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "ff3448b5ffd013b261466bb5d7898094a845756f8a69773331ebbf66518f4109"
+        }
+      ]
+    },
+    {
+      "name": "github.com/pkg/browser",
+      "version": "v0.0.0-20240102092130-5ac0b6a4141c",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "4801bb0c5d70b980b3e1f63d1d2df8d84fec22548e3d73f03a68df1fb808791f"
+        }
+      ]
+    },
+    {
+      "name": "github.com/pkg/errors",
+      "version": "v0.9.1",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "8d427fd87bc9579ea368fde3d49f9ca22eac857f91a9dec7e3004bdfab7dee86"
+        }
+      ]
+    },
+    {
+      "name": "github.com/rivo/uniseg",
+      "version": "v0.4.7",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "a59885f5f0f3b3c07cf9444db5fe399b6f0791eac82055f7b85cc65500551039"
+        }
+      ]
+    },
+    {
+      "name": "github.com/samber/lo",
+      "version": "v1.49.1",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "adb3ac2e3e382989de6befdd489f4714785af8aca47c01193a9892e8b26b3860"
+        }
+      ]
+    },
+    {
+      "name": "github.com/tkrajina/go-reflector",
+      "version": "v0.5.8",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE.txt",
+          "sha256": "3f1fc64a3fded0d8c44382af796cc434fb4026a5d3d56da296dd272277dc336f"
+        }
+      ]
+    },
+    {
+      "name": "github.com/wailsapp/go-webview2",
+      "version": "v1.0.22",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "3f10f3374cf30076196eb239667ce6063c64e4275afd2b397f6343f69676bb79"
+        },
+        {
+          "path": "webviewloader/LICENSE",
+          "sha256": "e2c9290019954c3c3664428b73b34186b2bb8faad9b2c50605d7cdd9df5c7177"
+        }
+      ]
+    },
+    {
+      "name": "github.com/wailsapp/mimetype",
+      "version": "v1.4.1",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "4335e2ceb33d8d7e75125192466ae8604617b0a67492b919604fe52dc56018d9"
+        }
+      ]
+    },
+    {
+      "name": "github.com/wailsapp/wails/v2",
+      "version": "v2.14.0",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "cede95c28e6e9d67d1c1e49e8ba3c20250c7d4080c3faca1579b6732327ae40d"
+        },
+        {
+          "path": "internal/frontend/desktop/windows/winc/LICENSE",
+          "sha256": "bccedbce38390429aa2fbb6cdff1e5622be8cd14c2b5b6b1f522db1813cdbb46"
+        },
+        {
+          "path": "internal/go-common-file-dialog/LICENSE",
+          "sha256": "2c09e92358414ef4da9739026acadfbd0663118e590238b306d70ccf60db3159"
+        },
+        {
+          "path": "internal/typescriptify/LICENSE.txt",
+          "sha256": "e4794d2db458f14f6bcbd2958b58729c91f274a27c08068e65d9e521d2bd941d"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/net",
+      "version": "v0.56.0",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        },
+        {
+          "path": "PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/sys",
+      "version": "v0.46.0",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        },
+        {
+          "path": "PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc"
+        }
+      ]
+    },
+    {
+      "name": "golang.org/x/text",
+      "version": "v0.39.0",
+      "scope": "Go module selected by the Windows production dependency graph; unmodified upstream source.",
+      "notices": [
+        {
+          "path": "LICENSE",
+          "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+        },
+        {
+          "path": "PATENTS",
+          "sha256": "96f408bfae65bf137fc2525d3ecb030271c50c1e90799f87abf8846d8dd505cc"
+        }
+      ]
+    },
+    {
+      "name": "Vite",
+      "version": "6.4.3",
+      "scope": "Build-time tool. Includes upstream bundled notices conservatively; the generated frontend may include the modulepreload helper. Node.js and the Vite server are not shipped.",
+      "notices": [
+        {
+          "path": "LICENSE.md",
+          "sha256": "008938a3441801ca3960f8e3ccb4c0738e7996442a53063141d57d3769a7344d"
+        }
+      ]
+    },
+    {
+      "name": "Unicode data",
+      "version": "license snapshot 2026-09-12",
+      "scope": "Unicode tables are used by Go and dependencies including uniseg. Source: https://www.unicode.org/license.txt",
+      "notices": [
+        {
+          "path": "UNICODE-LICENSE.txt",
+          "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+        }
+      ]
+    },
+    {
+      "name": "Microsoft Edge WebView2 Runtime terms",
+      "version": "snapshot 2026-09-12",
+      "scope": "Official Evergreen distribution terms: https://developer.microsoft.com/microsoft-edge/api/eula/webview2 ; HTML converted to plain text without changing the wording.",
+      "notices": [
+        {
+          "path": "MICROSOFT-WEBVIEW2-TERMS.txt",
+          "sha256": "10f1778e10515abefbe25480bd21b2d73d75a82cc4b4460d3efa0adb1399b02e"
+        }
+      ]
+    }
+  ],
+  "webview2_bootstrapper": {
+    "source_module": "github.com/wailsapp/wails/v2",
+    "version": "v2.14.0",
+    "path": "internal/webview2runtime/MicrosoftEdgeWebview2Setup.exe",
+    "size": 1793816,
+    "sha256": "7ebc4ce80143ef89cea86a61ea151502868db6caaa678b8b43660a66ace11c3a",
+    "distribution": "not shipped; retained in upstream Wails source cache only"
+  }
+}
