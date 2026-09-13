@@ -1,0 +1,43 @@
+MICROSOFT EDGE WEBVIEW2
+
+Copyright Microsoft Corporation. All rights reserved.
+
+This application uses the separately installed Microsoft Edge WebView2
+Evergreen Runtime. The full runtime is not bundled in this executable.
+The Windows production build uses Wails' browser installation strategy. It
+does not ship or run a WebView2 installer. If WebView2 is missing or outdated,
+it offers to open Microsoft's official download page. Users obtain the
+runtime directly from Microsoft and restart the app after installation.
+Microsoft software is not covered by this application's MIT license or the
+licenses of the Go WebView2 bindings.
+
+Microsoft's current software license terms and privacy terms apply to its
+components. Review the terms supplied with the installer and available from
+the official download page before redistribution or installation:
+https://developer.microsoft.com/en-us/microsoft-edge/webview2/
+
+Official distribution documentation (including packaging the bootstrapper):
+https://learn.microsoft.com/en-us/microsoft-edge/webview2/concepts/distribution
+
+Microsoft privacy statement:
+https://privacy.microsoft.com/privacystatement
+
+This is an independent application, not a Microsoft product. Microsoft does
+not sponsor or endorse it. Windows and Microsoft Edge are Microsoft marks.
+
+This notice identifies the component and links its terms; it does not grant
+redistribution rights or replace Microsoft's license agreement. The upstream bootstrapper
+source, size and SHA-256 are recorded in legal/dependency-inventory.json
+solely to check that this build does not contain that payload.
+
+Required SmartScreen disclosure: Microsoft Edge WebView2 includes Microsoft
+Defender SmartScreen. SmartScreen collects and sends end-user information to
+Microsoft as described in Microsoft's Privacy Statement and the Microsoft
+Edge Privacy Whitepaper:
+https://aka.ms/privacy
+https://learn.microsoft.com/en-us/microsoft-edge/privacy-whitepaper#smartscreen
+
+A plain-text snapshot of the official Evergreen distribution terms retrieved
+on 2026-09-12 is included as MICROSOFT-WEBVIEW2-TERMS.txt and reproduced below.
+Source: https://developer.microsoft.com/microsoft-edge/api/eula/webview2
+The terms accompanying the software version you obtain remain authoritative.
