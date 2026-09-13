@@ -1,0 +1,1482 @@
+{
+  " 5분 뒤 컴퓨터가 종료됩니다. 작업 중인 파일을 저장해 주세요. 앱을 닫아도 예약은 유지됩니다.": {
+    "en": " The computer will shut down in 5 minutes. Save your work. Closing this app does not cancel the schedule.",
+    "ja": " 5分後にコンピューターをシャットダウンします。作業中のファイルを保存してください。アプリを閉じても予約は解除されません。"
+  },
+  " 강조된 버튼을 누르면 실행 전 안내를 볼 수 있습니다.": {
+    "en": " Select the highlighted button to read the instructions before starting.",
+    "ja": " 強調されたボタンを押すと、実行前の説明を確認できます。"
+  },
+  " 다운로드 파일이 아직 준비되지 않았습니다. 다음 실행 시 다시 확인합니다.": {
+    "en": " The download is not ready yet. The app will check again next time.",
+    "ja": " ダウンロードファイルはまだ準備されていません。次回起動時に再確認します。"
+  },
+  " 서비스를 중지했습니다.": {
+    "en": " service stopped.",
+    "ja": " サービスを停止しました。"
+  },
+  " 자동 종료를 예약하지 못했습니다: ": {
+    "en": " Could not schedule shutdown: ",
+    "ja": " シャットダウンを予約できませんでした: "
+  },
+  " 폴더가 없어 건너뜁니다.": {
+    "en": " folder not found; skipping.",
+    "ja": " フォルダーがないためスキップします。"
+  },
+  " 폴더를 ": {
+    "en": " folder renamed to ",
+    "ja": " フォルダーを次の名前に変更しました: "
+  },
+  "%d분 %d초": {
+    "en": "%d min %d sec",
+    "ja": "%d分%d秒"
+  },
+  "%d초": {
+    "en": "%d sec",
+    "ja": "%d秒"
+  },
+  "%s 단계에서 오류가 발생했습니다. 앱을 관리자 권한으로 실행했는지와 인터넷 연결을 확인한 뒤 다시 시도해 주세요.": {
+    "en": "An error occurred during %s. Check administrator permissions and your internet connection, then try again.",
+    "ja": "%sでエラーが発生しました。管理者権限とインターネット接続を確認してから、もう一度お試しください。"
+  },
+  "%s 백업 실패: %w": {
+    "en": "Could not back up %s: %w",
+    "ja": "%sをバックアップできませんでした: %w"
+  },
+  "%s 서비스 상태 확인 실패: %w": {
+    "en": "Could not check service %s: %w",
+    "ja": "%sサービスの状態を確認できませんでした: %w"
+  },
+  "%s 서비스 재시작 실패: %w": {
+    "en": "Could not restart service %s: %w",
+    "ja": "%sサービスを再起動できませんでした: %w"
+  },
+  "%s 서비스 중지 실패: %w": {
+    "en": "Could not stop service %s: %w",
+    "ja": "%sサービスを停止できませんでした: %w"
+  },
+  "%s 종료 오류: %w": {
+    "en": "%s exited with an error: %w",
+    "ja": "%sの終了エラー: %w"
+  },
+  "%s 확인 실패: %w": {
+    "en": "Could not check %s: %w",
+    "ja": "%sを確認できませんでした: %w"
+  },
+  "(앱 버전": {
+    "en": "(App version",
+    "ja": "(アプリのバージョン"
+  },
+  "(으)로 백업했습니다.": {
+    "en": " (backup).",
+    "ja": " （バックアップ）。"
+  },
+  "BITS 서비스를 중지했습니다.": {
+    "en": "Stopped the BITS service.",
+    "ja": "BITSサービスを停止しました。"
+  },
+  "DISM 상태 복원": {
+    "en": "DISM health restoration",
+    "ja": "DISMによる状態の復元"
+  },
+  "Defender 빠른 검사": {
+    "en": "Defender quick scan",
+    "ja": "Defender クイックスキャン"
+  },
+  "Defender 빠른 검사는 Windows 데스크톱 앱에서 사용할 수 있습니다.": {
+    "en": "Defender quick scan is available in the Windows desktop app.",
+    "ja": "DefenderのクイックスキャンはWindowsデスクトップアプリで利用できます。"
+  },
+  "Defender 빠른 검사로 먼저 확인해 보세요": {
+    "en": "Start with a Defender quick scan",
+    "ja": "まずDefenderのクイックスキャンをお試しください"
+  },
+  "Defender 빠른 검사를 실행하고 있습니다. 완료될 때까지 기다려 주세요.": {
+    "en": "Running a Defender quick scan. Please wait until it finishes.",
+    "ja": "Defenderのクイックスキャンを実行しています。完了までお待ちください。"
+  },
+  "GitHub 요청이 제한되었습니다. 잠시 후 다시 시도해 주세요": {
+    "en": "GitHub requests are rate-limited. Please try again later",
+    "ja": "GitHubへのリクエストが制限されています。しばらくしてからお試しください"
+  },
+  "Microsoft Defender가 활성화되어 있어야 합니다.": {
+    "en": "Microsoft Defender must be enabled.",
+    "ja": "Microsoft Defenderが有効になっている必要があります。"
+  },
+  "Microsoft Defender로 위협이 자주 발견되는 주요 영역을 검사합니다.": {
+    "en": "Microsoft Defender scans common locations where threats are found.",
+    "ja": "Microsoft Defenderで脅威が見つかりやすい主要な領域をスキャンします。"
+  },
+  "Microsoft Edge WebView2 업데이트가 필요합니다. ": {
+    "en": "Microsoft Edge WebView2 needs an update. ",
+    "ja": "Microsoft Edge WebView2の更新が必要です。 "
+  },
+  "Microsoft 권장 순서에 따라 먼저 Windows 구성 요소 저장소를 복구한 다음, 보호된 시스템 파일을 검사합니다. 개인 파일과 설치된 앱은 삭제하지 않습니다.": {
+    "en": "Following Microsoft's recommended order, the app repairs the Windows component store, then checks protected system files. Personal files and installed apps are not deleted.",
+    "ja": "Microsoftが推奨する順序で、Windowsコンポーネントストアを修復してから、保護されたシステムファイルを検査します。個人ファイルやインストール済みアプリは削除しません。"
+  },
+  "Microsoft 도움말 보기 앱에서 Windows 업데이트 문제 해결사를 엽니다.": {
+    "en": "Opens the Windows Update troubleshooter in Microsoft's Get Help app.",
+    "ja": "Microsoftの「問い合わせ」アプリでWindows Updateのトラブルシューティングを開きます。"
+  },
+  "Microsoft 부팅 복구 안내 보기": {
+    "en": "View Microsoft's startup repair guide",
+    "ja": "Microsoftの起動修復ガイドを見る"
+  },
+  "Microsoft 빠른 지원 앱을 열어 도움을 주는 사람과 원격 지원을 시작합니다.": {
+    "en": "Opens Microsoft Quick Assist so you can get remote help from another person.",
+    "ja": "Microsoftクイックアシストを開き、支援者からリモートサポートを受けられます。"
+  },
+  "Microsoft 빠른 지원을 열어 신뢰하는 지원자와 화면을 함께 보면서 문제를 확인할 수 있습니다.": {
+    "en": "Use Microsoft Quick Assist to review the problem on screen with someone you trust.",
+    "ja": "Microsoftクイックアシストを使い、信頼できる支援者と画面を見ながら問題を確認できます。"
+  },
+  "Microsoft 안내 보기": {
+    "en": "View Microsoft guidance",
+    "ja": "Microsoftのガイドを見る"
+  },
+  "Microsoft 안내 페이지를 열었습니다. 문제가 생긴 PC에서 안내를 따라 주세요.": {
+    "en": "Opened Microsoft's guide. Follow the steps on the affected PC.",
+    "ja": "Microsoftのガイドを開きました。問題のあるPCで手順に従ってください。"
+  },
+  "Microsoft 페이지에서 WebView2를 설치한 뒤 이 앱을 다시 실행해 주세요.": {
+    "en": "Install WebView2 from Microsoft's page, then run this app again.",
+    "ja": "MicrosoftのページからWebView2をインストールして、このアプリを再起動してください。"
+  },
+  "Microsoft의 문제 해결 창을 열어 업데이트 상태를 확인하고 안내에 따라 조치합니다.": {
+    "en": "Opens Microsoft's troubleshooting window to check update status and follow the suggested steps.",
+    "ja": "Microsoftのトラブルシューティング画面を開き、更新の状態を確認して案内に従います。"
+  },
+  "Microsoft의 시동 복구 안내를 참고해 Windows 복구 화면에서 진행해야 합니다. 아래 버튼은 안내 페이지를 엽니다.": {
+    "en": "Follow Microsoft's Startup Repair guide in the Windows recovery environment. The button below opens the guide.",
+    "ja": "Microsoftのスタートアップ修復ガイドを参考に、Windowsの回復画面で操作してください。下のボタンでガイドを開きます。"
+  },
+  "PC를 다시 시작한 다음 Windows 업데이트에서 업데이트 확인을 눌러 새 파일을 내려받으세요.": {
+    "en": "Restart the PC, then select Check for updates in Windows Update to download fresh files.",
+    "ja": "PCを再起動してから、Windows Updateの「更新プログラムのチェック」で新しいファイルをダウンロードしてください。"
+  },
+  "PC를 다시 시작한 다음 업데이트를 다시 확인하세요.": {
+    "en": "Restart the PC, then check for updates again.",
+    "ja": "PCを再起動してから、更新をもう一度確認してください。"
+  },
+  "SFC 정밀 검사": {
+    "en": "SFC system file scan",
+    "ja": "SFCによるシステムファイル検査"
+  },
+  "SoftwareDistribution 폴더를 백업했습니다.": {
+    "en": "Backed up the SoftwareDistribution folder.",
+    "ja": "SoftwareDistributionフォルダーをバックアップしました。"
+  },
+  "WebView2 설치를 위해 시스템 관리자에게 문의해 주세요.": {
+    "en": "Contact your system administrator to install WebView2.",
+    "ja": "WebView2のインストールについてはシステム管理者にお問い合わせください。"
+  },
+  "WebView2가 설치되지 않아 앱을 실행할 수 없습니다.": {
+    "en": "The app cannot start because WebView2 is not installed.",
+    "ja": "WebView2がインストールされていないため、アプリを起動できません。"
+  },
+  "Windows Update에서 정상 파일을 확인하고 있습니다. 인터넷 연결이 필요할 수 있습니다.": {
+    "en": "Checking Windows Update for healthy files. An internet connection may be needed.",
+    "ja": "Windows Updateで正常なファイルを確認しています。インターネット接続が必要な場合があります。"
+  },
+  "Windows 검사 및 복구 완료: 5분 뒤 종료합니다. 작업 중인 파일을 저장해 주세요.": {
+    "en": "Windows scan and repair completed: shutting down in 5 minutes. Save your work.",
+    "ja": "Windowsの検査と修復が完了しました。5分後にシャットダウンします。作業中のファイルを保存してください。"
+  },
+  "Windows 구성 요소 복구": {
+    "en": "Windows component repair",
+    "ja": "Windowsコンポーネントの修復"
+  },
+  "Windows 구성 요소 복구 중": {
+    "en": "Repairing Windows components",
+    "ja": "Windowsコンポーネントを修復中"
+  },
+  "Windows 구성 요소 복구를 마쳤습니다.": {
+    "en": "Windows component repair finished.",
+    "ja": "Windowsコンポーネントの修復が完了しました。"
+  },
+  "Windows 구성 요소를 먼저 복구하고, 이어서 시스템 파일을 검사합니다. 손상된 파일이 원인인 경우 도움이 될 수 있습니다.": {
+    "en": "Repairs Windows components first, then checks system files. This may help if damaged files are causing the problem.",
+    "ja": "Windowsコンポーネントを修復した後、システムファイルを検査します。ファイルの破損が原因の場合に役立つことがあります。"
+  },
+  "Windows 구성 요소를 복구하고 있습니다.": {
+    "en": "Repairing Windows components.",
+    "ja": "Windowsコンポーネントを修復しています。"
+  },
+  "Windows 구성 요소를 복구한 다음 시스템 파일을 검사합니다. 손상된 파일이 발견되면 복구를 시도합니다.": {
+    "en": "Repairs Windows components, then checks system files and attempts to repair any damage found.",
+    "ja": "Windowsコンポーネントを修復してからシステムファイルを検査し、破損が見つかった場合は修復を試みます。"
+  },
+  "Windows 구성 요소와 시스템 파일을 차례로 검사하고 손상된 파일을 복구합니다.": {
+    "en": "Checks Windows components and system files in sequence and repairs damaged files.",
+    "ja": "Windowsコンポーネントとシステムファイルを順に検査し、破損したファイルを修復します。"
+  },
+  "Windows 기능을 열 수 없습니다: %w": {
+    "en": "Could not open the Windows feature: %w",
+    "ja": "Windowsの機能を開けませんでした: %w"
+  },
+  "Windows 내장 복구 기능을 실행하는 독립 도구입니다. Microsoft가 제작하거나 보증하는 앱이 아닙니다.": {
+    "en": "An independent tool that runs Windows' built-in repair features. It is not made or endorsed by Microsoft.",
+    "ja": "Windows内蔵の修復機能を実行する独立したツールです。Microsoftが開発または推奨するアプリではありません。"
+  },
+  "Windows 보안 · 검사 결과 보기": {
+    "en": "Windows Security · Scan results",
+    "ja": "Windows セキュリティ · 検査結果"
+  },
+  "Windows 보안 · 검사 결과 보기 ↗": {
+    "en": "Windows Security · Scan results ↗",
+    "ja": "Windows セキュリティ · 検査結果 ↗"
+  },
+  "Windows 보안에서 검사를 해봤나요?": {
+    "en": "Have you run a scan in Windows Security?",
+    "ja": "Windows セキュリティでスキャンしましたか？"
+  },
+  "Windows 보안에서 결과와 조치를 확인해 주세요": {
+    "en": "Review results and actions in Windows Security",
+    "ja": "Windows セキュリティで結果と対処を確認してください"
+  },
+  "Windows 보안은 Windows 데스크톱 앱에서 열어 주세요.": {
+    "en": "Open Windows Security from the Windows desktop app.",
+    "ja": "Windows セキュリティはWindowsデスクトップアプリから開いてください。"
+  },
+  "Windows 보안을 열어 탐지 결과와 필요한 조치를 확인합니다. 필요하면 그 화면에서 추가 검사를 선택할 수 있습니다.": {
+    "en": "Opens Windows Security to review detections and required actions. You can choose further scans there if needed.",
+    "ja": "Windows セキュリティを開いて検出結果と必要な対処を確認します。必要に応じて追加のスキャンを選べます。"
+  },
+  "Windows 보안의 안내에 따라 조치한 뒤 같은 증상이 계속되는지 확인해 주세요.": {
+    "en": "Follow Windows Security's instructions, then check whether the symptoms persist.",
+    "ja": "Windows セキュリティの案内に従って対処し、同じ症状が続くか確認してください。"
+  },
+  "Windows 사용 중 문제가 있고, 시스템 검사·복구는 아직 완료하지 않았다고 답하셨습니다.": {
+    "en": "You reported Windows problems and have not yet completed a system scan and repair.",
+    "ja": "Windowsに問題があり、システムの検査と修復はまだ完了していないとの回答でした。"
+  },
+  "Windows 서비스 관리자 연결 실패: %w": {
+    "en": "Could not connect to the Windows service manager: %w",
+    "ja": "Windowsサービスマネージャーに接続できませんでした: %w"
+  },
+  "Windows 시스템 복구 도우미": {
+    "en": "Windows System Repair Helper",
+    "ja": "Windows システム修復ヘルパー"
+  },
+  "Windows 시스템 파일도 검사해 보세요": {
+    "en": "Check Windows system files too",
+    "ja": "Windowsのシステムファイルも検査してみましょう"
+  },
+  "Windows 시스템 폴더를 확인할 수 없습니다": {
+    "en": "Could not locate the Windows system folder",
+    "ja": "Windowsシステムフォルダーを確認できませんでした"
+  },
+  "Windows 업데이트 관련 서비스를 안전하게 확인하고 있습니다.": {
+    "en": "Checking Windows Update services safely.",
+    "ja": "Windows Update関連のサービスを安全に確認しています。"
+  },
+  "Windows 업데이트 구성 요소를 안전하게 초기화하고 있습니다.": {
+    "en": "Resetting Windows Update components safely.",
+    "ja": "Windows Updateのコンポーネントを安全にリセットしています。"
+  },
+  "Windows 업데이트 기능을 다시 시작하고 있습니다.": {
+    "en": "Restarting Windows Update features.",
+    "ja": "Windows Updateの機能を再起動しています。"
+  },
+  "Windows 업데이트 문제 해결": {
+    "en": "Windows Update troubleshooting",
+    "ja": "Windows Updateの問題解決"
+  },
+  "Windows 업데이트 열기": {
+    "en": "Open Windows Update",
+    "ja": "Windows Updateを開く"
+  },
+  "Windows 업데이트 캐시 초기화": {
+    "en": "Reset Windows Update cache",
+    "ja": "Windows Updateキャッシュのリセット"
+  },
+  "Windows 업데이트가 설치되지 않거나 멈춰요": {
+    "en": "Windows updates will not install or get stuck",
+    "ja": "Windowsの更新をインストールできない、または途中で止まる"
+  },
+  "Windows 전체가 아니라 특정 프로그램 하나에서만 문제가 생긴다고 답하셨습니다.": {
+    "en": "You reported a problem with one app rather than Windows as a whole.",
+    "ja": "Windows全体ではなく、特定のアプリだけに問題があるとの回答でした。"
+  },
+  "Windows 종료 예약 명령이 실패했습니다: %w": {
+    "en": "Windows shutdown scheduling failed: %w",
+    "ja": "Windowsのシャットダウン予約に失敗しました: %w"
+  },
+  "Windows가 평소 같지 않나요?": {
+    "en": "Windows not working as usual?",
+    "ja": "Windowsの調子がいつもと違いますか？"
+  },
+  "Windows에 포함된 Microsoft Defender로 위협이 자주 발견되는 영역을 검사합니다.": {
+    "en": "Uses Microsoft Defender in Windows to scan common locations where threats are found.",
+    "ja": "Windows内蔵のMicrosoft Defenderで、脅威が見つかりやすい領域をスキャンします。"
+  },
+  "가끔이라도 바탕화면에 들어가 앱을 실행할 수 있어요": {
+    "en": "I can sometimes reach the desktop and run apps",
+    "ja": "時々でもデスクトップに入り、アプリを実行できる"
+  },
+  "가능하면 중요한 자료를 먼저 백업하고 PC 제조사나 신뢰하는 기술 지원자에게 점검을 요청하세요.": {
+    "en": "If possible, back up important files first, then ask the PC manufacturer or a trusted technician to inspect it.",
+    "ja": "可能であれば重要なファイルを先にバックアップし、PCメーカーや信頼できる技術者に点検を依頼してください。"
+  },
+  "가장 가까운 상황을 골라 주세요.": {
+    "en": "Choose the closest description.",
+    "ja": "最も近い状況を選んでください。"
+  },
+  "간단한 질문에 답하면, 먼저 해볼 도구와 그 이유를 알려드려요.": {
+    "en": "Answer a few questions to find a tool to try first and learn why it may help.",
+    "ja": "簡単な質問に答えると、まず試すツールとその理由をご案内します。"
+  },
+  "갑작스러운 전원 꺼짐, 심한 발열 또는 이상한 소음이 있다고 답하셨습니다.": {
+    "en": "You reported sudden shutdowns, excessive heat or unusual noise.",
+    "ja": "突然の電源断、ひどい発熱、または異音があるとの回答でした。"
+  },
+  "같은 복구를 반복하기보다 원인을 함께 확인해 주세요": {
+    "en": "Get help finding the cause instead of repeating the same repair",
+    "ja": "同じ修復を繰り返す前に、支援者と原因を確認しましょう"
+  },
+  "같은 프로그램의 같은 작업을 다시 해보세요. 지원을 받을 때는 프로그램 이름과 오류 문구를 알려 주세요.": {
+    "en": "Try the same task in the same app again. When seeking help, provide the app name and error message.",
+    "ja": "同じアプリで同じ操作をもう一度試してください。相談するときはアプリ名とエラーメッセージを伝えてください。"
+  },
+  "개발자 정보": {
+    "en": "About the developer",
+    "ja": "開発者情報"
+  },
+  "개인 파일과 설치된 앱은 삭제하지 않습니다.": {
+    "en": "Personal files and installed apps are not deleted.",
+    "ja": "個人ファイルやインストール済みアプリは削除しません。"
+  },
+  "검사 또는 복구 작업을 마치고 종료 예약을 취소한 뒤 업데이트를 설치해 주세요": {
+    "en": "Finish the scan or repair and cancel scheduled shutdown before installing the update",
+    "ja": "検査や修復を終え、シャットダウン予約を解除してから更新をインストールしてください"
+  },
+  "검사 또는 복구 작업이 진행 중입니다": {
+    "en": "A scan or repair is in progress",
+    "ja": "検査または修復を実行中です"
+  },
+  "검사 또는 복구 중에는 설치할 수 없습니다. 작업을 마친 뒤 설치해 주세요.": {
+    "en": "Installation is unavailable during a scan or repair. Finish the task first.",
+    "ja": "検査や修復の実行中はインストールできません。作業が終わってからインストールしてください。"
+  },
+  "검사 및 복구 시작": {
+    "en": "Start scan and repair",
+    "ja": "検査と修復を開始"
+  },
+  "검사 및 복구 완료 후 5분 뒤 컴퓨터 종료": {
+    "en": "Shut down 5 minutes after scan and repair finish",
+    "ja": "検査と修復の完了から5分後にシャットダウン"
+  },
+  "검사 및 복구 준비 중": {
+    "en": "Preparing scan and repair",
+    "ja": "検査と修復を準備中"
+  },
+  "검사 및 복구 취소": {
+    "en": "Cancel scan and repair",
+    "ja": "検査と修復をキャンセル"
+  },
+  "검사 및 복구를 시작하고 있습니다.": {
+    "en": "Starting scan and repair.",
+    "ja": "検査と修復を開始しています。"
+  },
+  "검사 여부에 따라 새 검사를 시작하거나 기존 결과를 확인할 수 있습니다.": {
+    "en": "You can start a new scan or review existing results, depending on what you have already tried.",
+    "ja": "これまでの検査状況に応じて、新しくスキャンするか、既存の結果を確認できます。"
+  },
+  "검사 준비됨": {
+    "en": "Ready to scan",
+    "ja": "検査の準備完了"
+  },
+  "검사 후 「Windows 보안 · 검사 결과 보기」에서 발견된 위협과 필요한 조치를 확인해 주세요.": {
+    "en": "After the scan, open Windows Security · Scan results to review threats and required actions.",
+    "ja": "検査後は「Windows セキュリティ · 検査結果」で、検出された脅威と必要な対処を確認してください。"
+  },
+  "검사·복구 작업 또는 종료 예약이 진행 중입니다": {
+    "en": "A scan, repair or scheduled shutdown is in progress",
+    "ja": "検査・修復またはシャットダウン予約が進行中です"
+  },
+  "검사·복구 작업 또는 종료 예약이 진행 중입니다. 작업을 마치고 종료 예약을 취소한 뒤 다시 시도해 주세요": {
+    "en": "A scan, repair or scheduled shutdown is in progress. Finish the task and cancel the shutdown before trying again",
+    "ja": "検査・修復またはシャットダウン予約が進行中です。作業を終えて予約を解除してからお試しください"
+  },
+  "검사가 끝나면 안내에 따라 PC를 다시 시작하고, 처음 문제가 생겼던 기능을 다시 사용해 보세요.": {
+    "en": "After the scan, restart the PC if instructed and try the feature that originally failed.",
+    "ja": "検査後は案内に従ってPCを再起動し、最初に問題が起きた機能をもう一度使ってみてください。"
+  },
+  "검사가 끝나면 필요에 따라 PC를 다시 시작하고 업데이트 설치를 다시 시도해 보세요.": {
+    "en": "After the scan, restart the PC if needed and try installing updates again.",
+    "ja": "検査後は必要に応じてPCを再起動し、更新のインストールをもう一度お試しください。"
+  },
+  "검사를 했는데 수상한 증상이 계속돼요": {
+    "en": "I scanned, but suspicious symptoms continue",
+    "ja": "スキャンしたが、不審な症状が続いている"
+  },
+  "검사와 복구가 완료되었습니다": {
+    "en": "Scan and repair completed",
+    "ja": "検査と修復が完了しました"
+  },
+  "검사와 복구가 정상적으로 끝나면 5분 뒤 컴퓨터가 꺼집니다. 저장하지 않은 작업 내용은 사라질 수 있으니 먼저 저장해 주세요. 완료 후 컴퓨터를 끌까요?": {
+    "en": "The computer will shut down 5 minutes after scan and repair complete successfully. Unsaved work may be lost, so save it first. Shut down when finished?",
+    "ja": "検査と修復が正常に完了すると、5分後にシャットダウンします。未保存の作業が失われる可能性があるため、先に保存してください。完了後にシャットダウンしますか？"
+  },
+  "검사와 복구를 취소했습니다": {
+    "en": "Scan and repair cancelled",
+    "ja": "検査と修復をキャンセルしました"
+  },
+  "검증 100% 완료…": {
+    "en": "Verification 100% complete…",
+    "ja": "検証が100%完了…"
+  },
+  "검증 50% 완료…": {
+    "en": "Verification 50% complete…",
+    "ja": "検証が50%完了…"
+  },
+  "계속 기다리기": {
+    "en": "Keep waiting",
+    "ja": "このまま待つ"
+  },
+  "고급 복구 도구": {
+    "en": "Advanced repair tools",
+    "ja": "高度な修復ツール"
+  },
+  "공개된 릴리스를 찾을 수 없습니다. 아직 배포되지 않았거나 저장소가 비공개일 수 있습니다.": {
+    "en": "No public release was found. It may not be published yet, or the repository may be private.",
+    "ja": "公開リリースが見つかりません。まだ公開されていないか、リポジトリが非公開の可能性があります。"
+  },
+  "관련 서비스는 다시 시작했습니다. PC를 재시작한 뒤 다시 시도하거나 빠른 지원을 이용해 주세요.": {
+    "en": "The related services were restarted. Restart the PC and try again, or use Quick Assist.",
+    "ja": "関連サービスを再起動しました。PCを再起動してお試しいただくか、クイックアシストをご利用ください。"
+  },
+  "관리자 권한": {
+    "en": "Administrator",
+    "ja": "管理者権限"
+  },
+  "구성 요소 저장소를 검사하고 있습니다…": {
+    "en": "Checking the component store…",
+    "ja": "コンポーネントストアを検査しています…"
+  },
+  "급히 나가야 한다면 ‘검사 및 복구 취소’를 누르고 취소 완료 후 앱을 닫으세요. 나중에 다시 검사할 수 있습니다.": {
+    "en": "If you need to leave, select Cancel scan and repair and wait for cancellation before closing the app. You can scan again later.",
+    "ja": "急いで終了する場合は「検査と修復をキャンセル」を押し、キャンセル完了後にアプリを閉じてください。後で再検査できます。"
+  },
+  "급히 나가야 한다면 지금 종료할 수 있습니다. 진행 중인 작업은 완료되지 않았을 수 있으며, 이미 적용된 변경은 되돌리지 않습니다.\n\n시스템 검사 및 복구는 취소 버튼으로 중단을 확인한 뒤 닫는 것을 권장합니다. 업데이트 캐시 초기화 중이라면 서비스 복원이 끝날 때까지 기다려 주세요.\n\n다음에 앱을 열어 다시 검사할 수 있습니다.": {
+    "en": "You can exit now if you need to leave. The running task may be incomplete, and changes already made will not be undone.\n\nFor a system scan or repair, use Cancel and wait for confirmation before closing. During an update cache reset, wait until service restoration finishes.\n\nYou can scan again the next time you open the app.",
+    "ja": "急いで終了する場合は、今すぐ閉じることもできます。作業が未完了の場合があり、適用済みの変更は元に戻りません。\n\nシステムの検査や修復は、キャンセルの完了を確認してから閉じることをお勧めします。更新キャッシュのリセット中は、サービスの復元が終わるまでお待ちください。\n\n次回起動時に再検査できます。"
+  },
+  "기존 캐시를 삭제하지 않고 백업 이름으로 변경합니다.": {
+    "en": "Renames the existing cache as a backup instead of deleting it.",
+    "ja": "既存のキャッシュを削除せず、バックアップ名に変更します。"
+  },
+  "끝까지 실행하고 다시 시작했는데 그대로예요": {
+    "en": "I completed it and restarted, but the problem remains",
+    "ja": "最後まで実行して再起動したが、改善しない"
+  },
+  "끝나면 무엇을 확인하나요?": {
+    "en": "What should I check afterwards?",
+    "ja": "完了後は何を確認しますか？"
+  },
+  "나중에": {
+    "en": "Later",
+    "ja": "後で"
+  },
+  "나중에 설치해도 현재 앱을 계속 사용할 수 있습니다.": {
+    "en": "You can keep using the current app and install later.",
+    "ja": "後でインストールしても、現在のアプリを引き続き利用できます。"
+  },
+  "내 상황에 맞는 도구 찾기": {
+    "en": "Find a tool for my situation",
+    "ja": "状況に合うツールを探す"
+  },
+  "네, 웹사이트가 정상적으로 열려요": {
+    "en": "Yes, websites open normally",
+    "ja": "はい、ウェブサイトは正常に開く"
+  },
+  "느려졌거나, 무엇이 문제인지 모르겠어요": {
+    "en": "It is slower, or I do not know what is wrong",
+    "ja": "遅くなった、または何が問題か分からない"
+  },
+  "느려지면서 오류도 뜨고 여러 기능이 잘 안 돼요": {
+    "en": "It is slow, shows errors and several features fail",
+    "ja": "遅くなり、エラーも出て、複数の機能が使えない"
+  },
+  "느려진 이유는 여러 가지입니다. 선택만으로 원인을 확정하지는 않습니다.": {
+    "en": "Slowness has many possible causes. Your choice alone does not establish the cause.",
+    "ja": "動作が遅くなる原因はさまざまです。回答だけで原因を特定するものではありません。"
+  },
+  "다른 PC에서 이 안내를 보고 있다면, 고장 난 PC의 상태를 골라 주세요.": {
+    "en": "If you are reading this on another PC, select the state of the affected PC.",
+    "ja": "別のPCでこのガイドを見ている場合は、問題のあるPCの状態を選んでください。"
+  },
+  "다른 검사나 복구가 진행 중입니다. 작업이 끝난 뒤 이 버튼으로 이동해 주세요.": {
+    "en": "Another scan or repair is running. Wait for it to finish before going to this tool.",
+    "ja": "別の検査や修復を実行中です。完了してからこのツールに移動してください。"
+  },
+  "다시 검사하기": {
+    "en": "Scan again",
+    "ja": "もう一度検査"
+  },
+  "다시 시도": {
+    "en": "Try again",
+    "ja": "再試行"
+  },
+  "다시 초기화": {
+    "en": "Reset again",
+    "ja": "もう一度リセット"
+  },
+  "다운로드 다시 시도": {
+    "en": "Retry download",
+    "ja": "ダウンロードを再試行"
+  },
+  "다운로드 오류 (HTTP %d)": {
+    "en": "Download error (HTTP %d)",
+    "ja": "ダウンロードエラー（HTTP %d）"
+  },
+  "다운로드 중…": {
+    "en": "Downloading…",
+    "ja": "ダウンロード中…"
+  },
+  "다운로드 파일 검증에 실패했습니다. 설치하지 않습니다": {
+    "en": "Download verification failed. Nothing will be installed",
+    "ja": "ダウンロードファイルの検証に失敗しました。インストールしません"
+  },
+  "다운로드는 데스크톱 앱에서 사용할 수 있습니다.": {
+    "en": "Downloads are available in the desktop app.",
+    "ja": "ダウンロードはデスクトップアプリで利用できます。"
+  },
+  "다음 복구 단계는 실행하지 않습니다. 이미 적용된 변경은 유지됩니다. 필요하면 Windows를 다시 시작한 뒤 다시 검사해 주세요.": {
+    "en": "The next repair step will not run. Changes already made remain in place. Restart Windows if needed, then scan again.",
+    "ja": "次の修復ステップは実行しません。適用済みの変更は維持されます。必要に応じてWindowsを再起動し、再検査してください。"
+  },
+  "닫기": {
+    "en": "Close",
+    "ja": "閉じる"
+  },
+  "답변에 따른 안내": {
+    "en": "Guidance based on your answers",
+    "ja": "回答に基づくご案内"
+  },
+  "돌아가기": {
+    "en": "Go back",
+    "ja": "戻る"
+  },
+  "라이선스 및 외부 구성 요소 고지": {
+    "en": "Licenses and third-party notices",
+    "ja": "ライセンスと外部コンポーネントの通知"
+  },
+  "라이선스 및 외부 구성 요소 고지 보기": {
+    "en": "View licenses and third-party notices",
+    "ja": "ライセンスと外部コンポーネントの通知を見る"
+  },
+  "먼저 Windows 부팅 복구 안내를 확인해 주세요": {
+    "en": "Start with Windows startup repair guidance",
+    "ja": "まずWindowsの起動修復ガイドを確認してください"
+  },
+  "먼저 앱 업데이트를 확인해 주세요": {
+    "en": "Check for an app update first",
+    "ja": "先にアプリの更新を確認してください"
+  },
+  "먼저 인터넷 연결을 확인해 주세요": {
+    "en": "Check your internet connection first",
+    "ja": "まずインターネット接続を確認してください"
+  },
+  "무엇을 하나요?": {
+    "en": "What does it do?",
+    "ja": "何をするツールですか？"
+  },
+  "문제 해결 창의 안내를 직접 따라야 합니다. 이 버튼만으로 모든 업데이트 오류가 해결되는 것은 아닙니다.": {
+    "en": "Follow the troubleshooting window's instructions yourself. This button cannot fix every update error.",
+    "ja": "開いた画面の案内に従って操作してください。このボタンですべての更新エラーが解決するわけではありません。"
+  },
+  "문제 해결사로 해결되지 않을 때만 사용하세요": {
+    "en": "Use only if the troubleshooter did not help",
+    "ja": "トラブルシューティングで解決しない場合のみ使用"
+  },
+  "문제 해결사를 실행하고 PC도 다시 시작했어요": {
+    "en": "I ran the troubleshooter and restarted the PC",
+    "ja": "トラブルシューティングを実行し、PCも再起動した"
+  },
+  "문제가 나타나는 범위에 따라 먼저 확인할 곳이 달라집니다.": {
+    "en": "Where the problem occurs helps determine what to check first.",
+    "ja": "問題が起きる範囲によって、最初に確認する場所が変わります。"
+  },
+  "문제가 생긴 PC에서 인터넷이 되나요?": {
+    "en": "Does the affected PC have internet access?",
+    "ja": "問題のあるPCでインターネットを使えますか？"
+  },
+  "문제가 생긴 PC의 바탕화면까지 들어갈 수 있나요?": {
+    "en": "Can the affected PC reach the desktop?",
+    "ja": "問題のあるPCでデスクトップまで進めますか？"
+  },
+  "문제가 생긴 PC의 바탕화면에 전혀 들어가지 못한다고 답하셨습니다.": {
+    "en": "You said the affected PC cannot reach the desktop at all.",
+    "ja": "問題のあるPCではデスクトップに全く入れないとの回答でした。"
+  },
+  "미리보기": {
+    "en": "Preview",
+    "ja": "プレビュー"
+  },
+  "바탕화면에 전혀 들어가지 못해요": {
+    "en": "I cannot reach the desktop at all",
+    "ja": "デスクトップに全く入れない"
+  },
+  "배포 버전을 확인할 수 없습니다: %w": {
+    "en": "Could not read the release version: %w",
+    "ja": "リリースのバージョンを確認できませんでした: %w"
+  },
+  "배포 파일의 SHA-256 검증 정보가 없습니다. 다음 실행 시 다시 시도합니다": {
+    "en": "The release has no SHA-256 verification information. The app will retry next time",
+    "ja": "配布ファイルのSHA-256検証情報がありません。次回起動時に再試行します"
+  },
+  "버전 번호가 너무 큽니다": {
+    "en": "Version number is too large",
+    "ja": "バージョン番号が大きすぎます"
+  },
+  "버전은 2026.09.12 또는 2026.09.12.1 형식이어야 합니다": {
+    "en": "Use a version such as 2026.09.12 or 2026.09.12.1",
+    "ja": "バージョンは2026.09.12または2026.09.12.1の形式で指定してください"
+  },
+  "버튼 한 번으로 손상되거나 누락된 Windows 시스템 파일을 검사하고 복구할 수 있습니다.": {
+    "en": "Scan for and repair damaged or missing Windows system files with one button.",
+    "ja": "ボタンひとつで、破損または欠落したWindowsシステムファイルを検査・修復できます。"
+  },
+  "보호된 시스템 파일을 검사하고 손상된 파일을 복구하고 있습니다.": {
+    "en": "Checking protected system files and repairing damaged files.",
+    "ja": "保護されたシステムファイルを検査し、破損したファイルを修復しています。"
+  },
+  "보호된 시스템 파일을 검사하고 있습니다.": {
+    "en": "Checking protected system files.",
+    "ja": "保護されたシステムファイルを検査しています。"
+  },
+  "복구 명령의 완료가 원래 문제의 해결을 보장하지는 않습니다. 추가 원인 확인이 필요합니다.": {
+    "en": "Finishing repair commands does not guarantee the original problem is fixed. Further investigation is needed.",
+    "ja": "修復コマンドの完了は、元の問題の解決を保証するものではありません。追加の原因調査が必要です。"
+  },
+  "복구 진행 중…": {
+    "en": "Repairing…",
+    "ja": "修復中…"
+  },
+  "복구 취소됨": {
+    "en": "Repair cancelled",
+    "ja": "修復をキャンセルしました"
+  },
+  "복구 화면에 접근하기 어렵거나 중요한 자료가 있다면 PC 제조사 또는 기술 지원자에게 도움을 요청하세요.": {
+    "en": "If you cannot access recovery or have important files, ask the PC manufacturer or a technician for help.",
+    "ja": "回復画面に入れない場合や重要なデータがある場合は、PCメーカーまたは技術者にご相談ください。"
+  },
+  "복구가 완료되어 5분 뒤 컴퓨터가 종료됩니다. 취소하려면 종료 예약 취소를 누르세요.": {
+    "en": "Repair finished. The computer will shut down in 5 minutes. Select Cancel scheduled shutdown to stop it.",
+    "ja": "修復が完了しました。5分後にシャットダウンします。取り消すには「シャットダウン予約を解除」を押してください。"
+  },
+  "복구를 반복하기보다 점검을 받아 주세요": {
+    "en": "Have the PC inspected before repeating repairs",
+    "ja": "修復を繰り返す前に点検を依頼してください"
+  },
+  "복구를 완료하지 못했습니다": {
+    "en": "Repair could not be completed",
+    "ja": "修復を完了できませんでした"
+  },
+  "복구를 적용하려면 Windows를 다시 시작해야 합니다.": {
+    "en": "Restart Windows to apply the repair.",
+    "ja": "修復を適用するにはWindowsを再起動してください。"
+  },
+  "복원 작업을 완료했습니다.": {
+    "en": "The restore operation completed.",
+    "ja": "復元操作が完了しました。"
+  },
+  "브라우저 미리보기용 데모가 완료되었습니다.": {
+    "en": "The browser preview demo has finished.",
+    "ja": "ブラウザープレビューのデモが完了しました。"
+  },
+  "빠른 검사 명령이 완료되었습니다. 위협 탐지 및 조치 결과는 Windows 보안에서 확인해 주세요.": {
+    "en": "The quick scan command finished. Check Windows Security for threat detections and actions.",
+    "ja": "クイックスキャンのコマンドが完了しました。脅威の検出と対処の結果はWindows セキュリティで確認してください。"
+  },
+  "빠른 검사 진행 중…": {
+    "en": "Quick scan in progress…",
+    "ja": "クイックスキャン中…"
+  },
+  "빠른 검사는 PC의 모든 파일을 검사하지 않습니다. 아무것도 발견되지 않아도 의심 증상이 계속되면 추가 확인이 필요합니다.": {
+    "en": "A quick scan does not check every file. If suspicious symptoms continue even with no detections, further checks are needed.",
+    "ja": "クイックスキャンは全ファイルを検査しません。何も検出されなくても不審な症状が続く場合は、追加の確認が必要です。"
+  },
+  "빠른 검사를 완료하지 못했습니다. Windows 보안에서 Defender가 활성화되어 있는지, 다른 검사가 진행 중인지 확인해 주세요": {
+    "en": "The quick scan did not finish. Check Windows Security to see whether Defender is enabled or another scan is running",
+    "ja": "クイックスキャンを完了できませんでした。Windows セキュリティでDefenderが有効か、別のスキャンが実行中でないか確認してください"
+  },
+  "빠른 지원": {
+    "en": "Quick Assist",
+    "ja": "クイックアシスト"
+  },
+  "빠른 지원 앱과 인터넷 연결이 필요합니다.": {
+    "en": "Quick Assist and an internet connection are required.",
+    "ja": "クイックアシストとインターネット接続が必要です。"
+  },
+  "빠른 지원 여는 중…": {
+    "en": "Opening Quick Assist…",
+    "ja": "クイックアシストを開いています…"
+  },
+  "빠른 지원 열기": {
+    "en": "Open Quick Assist",
+    "ja": "クイックアシストを開く"
+  },
+  "빠른 지원으로 신뢰하는 지원자와 오류 화면, 이미 시도한 작업을 함께 확인할 수 있습니다.": {
+    "en": "Use Quick Assist to review the error screen and steps already tried with someone you trust.",
+    "ja": "クイックアシストで信頼できる支援者と、エラー画面や試した対処を確認できます。"
+  },
+  "빠른 지원으로 함께 확인해 보세요": {
+    "en": "Review the problem together using Quick Assist",
+    "ja": "クイックアシストで一緒に確認しましょう"
+  },
+  "새 버전 ": {
+    "en": "New version ",
+    "ja": "新しいバージョン "
+  },
+  "새 버전을 설치하시겠습니까?": {
+    "en": "Install the new version?",
+    "ja": "新しいバージョンをインストールしますか？"
+  },
+  "새 버전을 자동으로 다운로드하고 있습니다. 앱은 계속 사용할 수 있습니다.": {
+    "en": "Downloading the new version automatically. You can keep using the app.",
+    "ja": "新しいバージョンを自動ダウンロードしています。アプリは引き続き利用できます。"
+  },
+  "새 버전이 준비되었습니다. 편할 때 설치해 주세요.": {
+    "en": "The new version is ready. Install it when convenient.",
+    "ja": "新しいバージョンの準備ができました。都合のよいときにインストールしてください。"
+  },
+  "서비스 상태 변경 시간 초과": {
+    "en": "Timed out waiting for the service state to change",
+    "ja": "サービスの状態変更がタイムアウトしました"
+  },
+  "서비스 중지를 시작합니다.": {
+    "en": "Starting service shutdown.",
+    "ja": "サービスの停止を開始します。"
+  },
+  "서비스를 다시 시작합니다.": {
+    "en": "Restarting the service.",
+    "ja": "サービスを再起動します。"
+  },
+  "선택한 답변은 서버에 보내거나 저장하지 않습니다. 증상에 맞는 사용 안내이며, 고장 원인을 확정하는 진단은 아닙니다.": {
+    "en": "Your answers are not saved or sent to a server. This guide suggests tools based on symptoms; it does not diagnose the cause.",
+    "ja": "回答は保存されず、サーバーにも送信されません。症状に合う使い方の案内であり、故障原因を確定する診断ではありません。"
+  },
+  "선택한 상황: ": {
+    "en": "Your situation: ",
+    "ja": "選択した状況: "
+  },
+  "설명하기 어려워서 누군가 함께 봐줬으면 해요": {
+    "en": "It is hard to explain; I would like someone to look with me",
+    "ja": "説明が難しいので、誰かに一緒に見てほしい"
+  },
+  "설치된 업데이트와 개인 파일은 삭제하지 않지만, 업데이트 파일을 다시 내려받아야 합니다.": {
+    "en": "Installed updates and personal files are not deleted, but update files will need to be downloaded again.",
+    "ja": "インストール済みの更新や個人ファイルは削除しませんが、更新ファイルの再ダウンロードが必要です。"
+  },
+  "설치하기": {
+    "en": "Install",
+    "ja": "インストール"
+  },
+  "설치하면 현재 앱이 종료됩니다. 무설치 버전은 파일을 교체한 뒤 자동으로 다시 실행합니다.": {
+    "en": "Installation closes the current app. The portable version replaces its file and restarts automatically.",
+    "ja": "インストールすると現在のアプリを終了します。ポータブル版はファイルを置き換えて自動的に再起動します。"
+  },
+  "손상됐을 수 있는 다운로드 캐시를 백업하고 새로 만듭니다.": {
+    "en": "Backs up and recreates the download cache, which may be damaged.",
+    "ja": "破損している可能性のあるダウンロードキャッシュをバックアップし、作り直します。"
+  },
+  "손상됐을 수 있는 다운로드 캐시를 백업하고 새로 만듭니다. 설치된 업데이트와 개인 파일은 삭제하지 않지만 업데이트 파일을 다시 내려받아야 합니다.": {
+    "en": "Backs up and recreates the download cache, which may be damaged. Installed updates and personal files are kept, but update files must be downloaded again.",
+    "ja": "破損している可能性のあるダウンロードキャッシュをバックアップし、作り直します。インストール済みの更新や個人ファイルは残りますが、更新ファイルの再ダウンロードが必要です。"
+  },
+  "수상한 광고나 악성 프로그램이 의심돼요": {
+    "en": "I see suspicious ads or suspect malware",
+    "ja": "不審な広告が出る、またはマルウェアが疑われる"
+  },
+  "시스템 검사 및 복구": {
+    "en": "System scan and repair",
+    "ja": "システムの検査と修復"
+  },
+  "시스템 검사 및 복구를 시도해 보세요": {
+    "en": "Try a system scan and repair",
+    "ja": "システムの検査と修復をお試しください"
+  },
+  "시스템 검사를 시작합니다…": {
+    "en": "Starting system scan…",
+    "ja": "システム検査を開始します…"
+  },
+  "시스템 검사와 복구까지 했는데 그대로예요": {
+    "en": "I also ran system scan and repair, but it did not help",
+    "ja": "システムの検査と修復まで行ったが、改善しない"
+  },
+  "시스템 검사와 복구를 마치고 다시 시작해도 문제가 계속된다고 답하셨습니다.": {
+    "en": "You reported that the problem continues after completing system scan and repair and restarting.",
+    "ja": "システムの検査と修復を終えて再起動しても、問題が続くとの回答でした。"
+  },
+  "시스템 검사와 복구를 이미 해봤나요?": {
+    "en": "Have you already run system scan and repair?",
+    "ja": "システムの検査と修復は実行済みですか？"
+  },
+  "시스템 복구 도우미": {
+    "en": "System Repair Helper",
+    "ja": "システム修復ヘルパー"
+  },
+  "시스템 파일 검사": {
+    "en": "System file scan",
+    "ja": "システムファイルの検査"
+  },
+  "시스템 파일 검사 중": {
+    "en": "Scanning system files",
+    "ja": "システムファイルを検査中"
+  },
+  "시스템 파일 검사를 마쳤습니다.": {
+    "en": "System file scan finished.",
+    "ja": "システムファイルの検査が完了しました。"
+  },
+  "시스템 파일 복구만으로 악성 프로그램이 제거된다고 판단할 수는 없습니다.": {
+    "en": "System file repair alone does not establish that malware has been removed.",
+    "ja": "システムファイルの修復だけで、マルウェアが除去されたとは判断できません。"
+  },
+  "시작 메뉴·설정 등 여러 Windows 기능에서 생겨요": {
+    "en": "Several Windows features, such as Start or Settings, fail",
+    "ja": "スタートや設定など、複数のWindows機能で問題が起きる"
+  },
+  "시작 전 안내": {
+    "en": "Before you start",
+    "ja": "実行前のご案内"
+  },
+  "시작하기": {
+    "en": "Start",
+    "ja": "開始"
+  },
+  "시작할 수 없습니다": {
+    "en": "Cannot start",
+    "ja": "開始できません"
+  },
+  "신뢰하는 사람에게만 화면 공유와 제어를 허용해 주세요.": {
+    "en": "Allow screen sharing and control only for people you trust.",
+    "ja": "画面の共有や操作は、信頼できる人にだけ許可してください。"
+  },
+  "아니요, 인터넷도 안 돼요": {
+    "en": "No, the internet does not work either",
+    "ja": "いいえ、インターネットも使えない"
+  },
+  "아직 안 해봤거나 잘 모르겠어요": {
+    "en": "I have not tried, or I am not sure",
+    "ja": "まだ試していない、または分からない"
+  },
+  "아직 안 해봤어요": {
+    "en": "I have not tried yet",
+    "ja": "まだ試していない"
+  },
+  "아직 안 했거나 잘 모르겠어요": {
+    "en": "I have not done it, or I am not sure",
+    "ja": "まだ実行していない、または分からない"
+  },
+  "아직 확인하지 못했어요": {
+    "en": "I have not checked yet",
+    "ja": "まだ確認していない"
+  },
+  "악성 프로그램이 의심되지만 아직 보안 검사를 하지 않았다고 답하셨습니다.": {
+    "en": "You suspect malware but have not run a security scan yet.",
+    "ja": "マルウェアが疑われるものの、セキュリティスキャンはまだ行っていないとの回答でした。"
+  },
+  "안내 확인했어요": {
+    "en": "Got it",
+    "ja": "確認しました"
+  },
+  "안내를 마친 뒤 Windows 업데이트를 다시 시도해 보세요. 실패하면 이 안내에서 해본 단계를 다시 선택해 주세요.": {
+    "en": "After following the instructions, try Windows Update again. If it fails, return here and select the steps you have tried.",
+    "ja": "案内を終えたらWindows Updateを再試行してください。失敗した場合は、このガイドで試した手順を選び直してください。"
+  },
+  "안내를 열지 못했습니다. 잠시 후 다시 시도해 주세요. ": {
+    "en": "Could not open the guidance. Please try again later. ",
+    "ja": "案内を開けませんでした。しばらくしてからお試しください。 "
+  },
+  "알아두세요": {
+    "en": "Keep in mind",
+    "ja": "知っておきたいこと"
+  },
+  "앱 업데이트": {
+    "en": "App update",
+    "ja": "アプリの更新"
+  },
+  "앱 업데이트 실패": {
+    "en": "App update failed",
+    "ja": "アプリの更新に失敗しました"
+  },
+  "앱 업데이트 확인은 데스크톱 앱에서 사용할 수 있습니다.": {
+    "en": "App update checks are available in the desktop app.",
+    "ja": "アプリの更新確認はデスクトップアプリで利用できます。"
+  },
+  "앱 종료를 기다리다 시간이 초과되었습니다": {
+    "en": "Timed out waiting for the app to close",
+    "ja": "アプリの終了待機がタイムアウトしました"
+  },
+  "앱에 포함된 라이선스 원문을 인터넷 연결 없이 확인할 수 있습니다. Microsoft WebView2의 이용 조건은 Microsoft가 제공하는 약관을 확인해 주세요.": {
+    "en": "You can read the bundled license texts offline. For Microsoft WebView2 terms, consult the terms provided by Microsoft.",
+    "ja": "同梱されたライセンス原文はオフラインで確認できます。Microsoft WebView2の利用条件は、Microsoftが提供する規約をご確認ください。"
+  },
+  "어디서 생기는지 구분하기 어려워요": {
+    "en": "I cannot tell where it happens",
+    "ja": "どこで起きているのか判断できない"
+  },
+  "어디에서 문제가 생기나요?": {
+    "en": "Where does the problem occur?",
+    "ja": "どこで問題が起きますか？"
+  },
+  "어떤 버튼을 눌러야 할지 모르겠나요?": {
+    "en": "Not sure which button to use?",
+    "ja": "どのボタンを使うか迷っていますか？"
+  },
+  "어떤 작업을 하나요?": {
+    "en": "What does the app do?",
+    "ja": "どのような作業をしますか？"
+  },
+  "어떤 점이 가장 불편한가요?": {
+    "en": "What is bothering you most?",
+    "ja": "いちばん困っていることは何ですか？"
+  },
+  "언제 전원이 꺼지는지, 소음이나 발열이 어디에서 생기는지 전달하면 점검에 도움이 됩니다.": {
+    "en": "Explain when shutdowns happen and where noise or heat comes from to help with inspection.",
+    "ja": "いつ電源が切れるか、どこから音や熱が出るかを伝えると、点検に役立ちます。"
+  },
+  "언제부터 느려졌는지, 어떤 작업에서 불편한지 지원자에게 알려 주세요.": {
+    "en": "Tell your helper when the slowdown began and which tasks are affected.",
+    "ja": "いつから遅くなったか、どの操作で困るかを支援者に伝えてください。"
+  },
+  "업데이트 관련 서비스를 잠시 중지하고, 작업 후 원래 상태로 복원합니다. 서비스 복원이 끝날 때까지 앱을 닫지 마세요.": {
+    "en": "Temporarily stops update services and restores their original state afterwards. Do not close the app until service restoration finishes.",
+    "ja": "更新関連のサービスを一時停止し、作業後に元の状態へ戻します。サービスの復元が終わるまでアプリを閉じないでください。"
+  },
+  "업데이트 다운로드에 실패했습니다. 인터넷 연결을 확인해 주세요": {
+    "en": "The update download failed. Check your internet connection",
+    "ja": "更新のダウンロードに失敗しました。インターネット接続を確認してください"
+  },
+  "업데이트 다운로드와 파일 검증이 완료되었습니다.": {
+    "en": "The update has been downloaded and verified.",
+    "ja": "更新のダウンロードとファイルの検証が完了しました。"
+  },
+  "업데이트 문제 해결": {
+    "en": "Troubleshoot updates",
+    "ja": "更新の問題を解決"
+  },
+  "업데이트 문제 해결부터 시작해 보세요": {
+    "en": "Start with update troubleshooting",
+    "ja": "まず更新のトラブルシューティングをお試しください"
+  },
+  "업데이트 문제를 해결하려고 어디까지 해봤나요?": {
+    "en": "What have you tried to fix updates?",
+    "ja": "更新の問題に対して、何を試しましたか？"
+  },
+  "업데이트 서버 오류입니다 (HTTP %d). 잠시 후 다시 시도해 주세요": {
+    "en": "Update server error (HTTP %d). Please try again later",
+    "ja": "更新サーバーのエラー（HTTP %d）です。しばらくしてからお試しください"
+  },
+  "업데이트 서버에 연결하지 못했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요": {
+    "en": "Could not connect to the update server. Check your internet connection and try again",
+    "ja": "更新サーバーに接続できませんでした。インターネット接続を確認してお試しください"
+  },
+  "업데이트 서비스 다시 시작 중": {
+    "en": "Restarting update services",
+    "ja": "更新サービスを再起動中"
+  },
+  "업데이트 서비스 중지 중": {
+    "en": "Stopping update services",
+    "ja": "更新サービスを停止中"
+  },
+  "업데이트 설치": {
+    "en": "Install update",
+    "ja": "更新をインストール"
+  },
+  "업데이트 설치가 실패하거나 진행이 멈췄을 때 사용합니다.": {
+    "en": "Use when update installation fails or gets stuck.",
+    "ja": "更新のインストールが失敗したり、途中で止まったりする場合に使用します。"
+  },
+  "업데이트 설치는 Windows 앱에서 사용할 수 있습니다.": {
+    "en": "Update installation is available in the Windows app.",
+    "ja": "更新のインストールはWindowsアプリで利用できます。"
+  },
+  "업데이트 실패 원인을 확정한 것은 아닙니다. 같은 문제가 계속되면 오류 코드와 함께 지원을 요청해 주세요.": {
+    "en": "This does not confirm the cause of the update failure. If it continues, seek help with the error code.",
+    "ja": "更新失敗の原因を特定したわけではありません。問題が続く場合は、エラーコードを添えてサポートに相談してください。"
+  },
+  "업데이트 정보를 읽을 수 없습니다. 잠시 후 다시 시도해 주세요": {
+    "en": "Could not read update information. Please try again later",
+    "ja": "更新情報を読み取れませんでした。しばらくしてからお試しください"
+  },
+  "업데이트 준비": {
+    "en": "Prepare update",
+    "ja": "更新を準備"
+  },
+  "업데이트 준비 중입니다": {
+    "en": "An update is being prepared",
+    "ja": "更新を準備しています"
+  },
+  "업데이트 초기화 준비 중": {
+    "en": "Preparing update reset",
+    "ja": "更新のリセットを準備中"
+  },
+  "업데이트 초기화를 완료하지 못했습니다": {
+    "en": "Update reset could not be completed",
+    "ja": "更新のリセットを完了できませんでした"
+  },
+  "업데이트 캐시 백업 중": {
+    "en": "Backing up update cache",
+    "ja": "更新キャッシュをバックアップ中"
+  },
+  "업데이트 캐시 초기화": {
+    "en": "Reset update cache",
+    "ja": "更新キャッシュをリセット"
+  },
+  "업데이트 캐시 초기화 완료": {
+    "en": "Update cache reset completed",
+    "ja": "更新キャッシュのリセットが完了しました"
+  },
+  "업데이트 캐시 초기화 후 재시작도 했어요": {
+    "en": "I reset the update cache and restarted too",
+    "ja": "更新キャッシュをリセットし、再起動もした"
+  },
+  "업데이트 캐시 초기화를 다음 단계로 고려해 보세요": {
+    "en": "Consider resetting the update cache next",
+    "ja": "次の手順として更新キャッシュのリセットを検討してください"
+  },
+  "업데이트 캐시를 초기화하고 다시 시작해도 문제가 계속된다고 답하셨습니다. Windows 파일 손상이 원인인지 확인할 수 있습니다.": {
+    "en": "The problem continues after resetting the update cache and restarting. Checking Windows files may help identify damage.",
+    "ja": "更新キャッシュをリセットして再起動しても問題が続くとの回答でした。Windowsファイルに破損がないか検査できます。"
+  },
+  "업데이트 파일 검증에 실패했습니다": {
+    "en": "Update file verification failed",
+    "ja": "更新ファイルの検証に失敗しました"
+  },
+  "업데이트 파일을 받으려면 인터넷이 필요합니다. 연결이 안 되는 상태에서 캐시 초기화부터 권하지 않습니다.": {
+    "en": "Downloading updates needs internet access. Resetting the cache is not the recommended first step while offline.",
+    "ja": "更新ファイルのダウンロードにはインターネットが必要です。未接続の状態で、最初にキャッシュのリセットを行うことはお勧めしません。"
+  },
+  "업데이트 파일을 저장하지 못했습니다": {
+    "en": "Could not save the update file",
+    "ja": "更新ファイルを保存できませんでした"
+  },
+  "업데이트 파일이 너무 큽니다": {
+    "en": "The update file is too large",
+    "ja": "更新ファイルが大きすぎます"
+  },
+  "업데이트를 먼저 다운로드해 주세요": {
+    "en": "Download the update first",
+    "ja": "先に更新をダウンロードしてください"
+  },
+  "업데이트를 적용하지 못했습니다. 기존 앱을 다시 실행해 주세요.\n\n": {
+    "en": "Could not apply the update. Start the previous app again.\n\n",
+    "ja": "更新を適用できませんでした。以前のアプリをもう一度起動してください。\n\n"
+  },
+  "연락처:": {
+    "en": "Contact:",
+    "ja": "連絡先:"
+  },
+  "열린 창의 안내에 따라 진단과 해결을 진행해 주세요.": {
+    "en": "Follow the opened window's instructions to diagnose and resolve the issue.",
+    "ja": "開いた画面の案内に従って、診断と問題解決を進めてください。"
+  },
+  "오류": {
+    "en": "Error",
+    "ja": "エラー"
+  },
+  "오류 코드와 「자세한 진행 내용 보기」의 결과를 준비해 주세요. 지원자에게 어떤 복구를 했는지 전달해 주세요.": {
+    "en": "Have the error code and the detailed progress output ready. Tell your helper which repairs you have tried.",
+    "ja": "エラーコードと「詳しい進行状況を見る」の結果を用意し、実行した修復内容を支援者に伝えてください。"
+  },
+  "오류가 반복되거나 Windows 기능이 잘 안 돼요": {
+    "en": "Errors repeat or Windows features do not work",
+    "ja": "エラーが繰り返される、またはWindowsの機能が動かない"
+  },
+  "왜 이 안내인가요?": {
+    "en": "Why this guidance?",
+    "ja": "この案内の理由は？"
+  },
+  "외부 구성 요소 · Third-party notices": {
+    "en": "Third-party components · Notices",
+    "ja": "外部コンポーネント · 通知"
+  },
+  "외부 구성 요소 라이선스 원문": {
+    "en": "Original third-party license texts",
+    "ja": "外部コンポーネントのライセンス原文"
+  },
+  "위협이 발견됐거나 조치하라는 안내가 나왔어요": {
+    "en": "Threats were found or I was asked to take action",
+    "ja": "脅威が検出された、または対処を求められた"
+  },
+  "을 사용할 수 있습니다.": {
+    "en": " is available.",
+    "ja": " が利用できます。"
+  },
+  "이 도구는 개별 프로그램의 설정이나 모든 오류를 진단하지 않습니다. 빠른 지원에는 도움을 주는 사람이 필요합니다.": {
+    "en": "This tool does not diagnose every app's settings or errors. Quick Assist requires another person to help.",
+    "ja": "このツールは個別アプリの設定やすべてのエラーを診断するものではありません。クイックアシストには支援者が必要です。"
+  },
+  "이 앱은 Windows 10 및 Windows 11에서만 실행할 수 있습니다.": {
+    "en": "This app can only run on Windows 10 and Windows 11.",
+    "ja": "このアプリはWindows 10とWindows 11でのみ実行できます。"
+  },
+  "이 앱을 실행하려면 Microsoft Edge WebView2가 필요합니다. ": {
+    "en": "This app requires Microsoft Edge WebView2. ",
+    "ja": "このアプリにはMicrosoft Edge WebView2が必要です。 "
+  },
+  "이 앱을 실행하려면 Microsoft Edge WebView2를 먼저 설치해야 합니다. 확인을 누르면 Microsoft 설치 페이지를 엽니다. 설치한 뒤 이 앱을 다시 실행해 주세요. 필요한 최소 버전: ": {
+    "en": "Install Microsoft Edge WebView2 before running this app. Select OK to open Microsoft's installation page. After installation, run this app again. Minimum required version: ",
+    "ja": "このアプリを使うにはMicrosoft Edge WebView2のインストールが必要です。「OK」を押すとMicrosoftのインストールページを開きます。インストール後にこのアプリを再起動してください。必要な最低バージョン: "
+  },
+  "이 앱의 검사·복구가 끝난 뒤 PC를 다시 시작해 보았는지 알려 주세요.": {
+    "en": "Tell us whether you restarted the PC after this app finished scanning and repairing.",
+    "ja": "このアプリの検査と修復が完了した後、PCを再起動したかどうか教えてください。"
+  },
+  "이 앱이 지원자를 자동으로 연결해 주지는 않습니다. 알고 있는 사람에게만 화면 공유와 제어를 허용하세요.": {
+    "en": "This app does not automatically find a helper. Share your screen and allow control only with someone you know and trust.",
+    "ja": "このアプリが支援者を自動で紹介することはありません。画面の共有や操作は、知っている信頼できる人にだけ許可してください。"
+  },
+  "이미 검사를 했거나 Windows 보안에서 조치가 필요하다는 안내를 받았다고 답하셨습니다.": {
+    "en": "You have already scanned, or Windows Security asked you to take action.",
+    "ja": "すでにスキャンしたか、Windows セキュリティから対処を求められたとの回答でした。"
+  },
+  "이미 받아 놓은 업데이트 임시 파일을 백업 이름으로 옮겨 Windows가 파일을 새로 받도록 합니다.": {
+    "en": "Renames downloaded temporary update files as a backup so Windows can download fresh copies.",
+    "ja": "ダウンロード済みの一時更新ファイルをバックアップ名に変更し、Windowsが新しくダウンロードできるようにします。"
+  },
+  "이미지 버전 확인 중…": {
+    "en": "Checking image version…",
+    "ja": "イメージのバージョンを確認中…"
+  },
+  "이번 실행에서는 업데이트를 확인하지 못했습니다. 다음 실행 시 다시 확인합니다.": {
+    "en": "Could not check for updates this time. The app will check again next time it starts.",
+    "ja": "今回は更新を確認できませんでした。次回起動時に再確認します。"
+  },
+  "이전 질문": {
+    "en": "Previous question",
+    "ja": "前の質問"
+  },
+  "이전 파일 복원 실패: ": {
+    "en": "Could not restore the previous file: ",
+    "ja": "以前のファイルを復元できませんでした: "
+  },
+  "이전에 중단한 뒤 다시 시작한 경우, 5분이 지나도 진행되지 않으면 컴퓨터를 재시작한 후 다시 실행해 주세요. 50% 이상에서 멈춘 경우, 정상적인 복구 과정이니 기다려주세요.": {
+    "en": "If you restarted after cancelling and nothing progresses for 5 minutes, restart the computer and run the app again. If it pauses at 50% or higher, please wait; this can be part of normal repair.",
+    "ja": "以前中断してから再実行した場合、5分経っても進まなければPCを再起動して再実行してください。50%以上で止まっている場合は、通常の修復過程のことがあるため、そのままお待ちください。"
+  },
+  "인터넷 연결이 되지 않거나 아직 연결 여부를 확인하지 못했다고 답하셨습니다.": {
+    "en": "You reported that internet access is unavailable or has not been checked yet.",
+    "ja": "インターネットに接続できない、またはまだ確認していないとの回答でした。"
+  },
+  "인터넷 연결이 필요할 수 있습니다.": {
+    "en": "An internet connection may be required.",
+    "ja": "インターネット接続が必要な場合があります。"
+  },
+  "인터넷 연결이 필요할 수 있으며, 10분 이상 걸릴 수 있습니다.": {
+    "en": "An internet connection may be required, and the task can take over 10 minutes.",
+    "ja": "インターネット接続が必要な場合があり、10分以上かかることがあります。"
+  },
+  "인터넷 창에서 평소 쓰는 웹사이트가 열리는지 확인해 주세요. 업데이트 파일을 받으려면 연결이 필요합니다.": {
+    "en": "Check whether a website you normally use opens. A connection is needed to download updates.",
+    "ja": "普段使うウェブサイトが開くか確認してください。更新のダウンロードには接続が必要です。"
+  },
+  "인터넷은 연결되어 있고, 기본 해결 절차를 아직 시도하지 않았다고 답하셨습니다.": {
+    "en": "You have internet access and have not tried the basic troubleshooting steps yet.",
+    "ja": "インターネットに接続でき、基本的な対処はまだ試していないとの回答でした。"
+  },
+  "인터넷이 되고, 문제 해결사와 재시작을 이미 시도했지만 업데이트가 되지 않는다고 답하셨습니다.": {
+    "en": "You have internet access, but updates still fail after troubleshooting and restarting.",
+    "ja": "インターネットに接続でき、トラブルシューティングと再起動を試しても更新できないとの回答でした。"
+  },
+  "인터넷이 연결된 뒤 이 안내를 다시 열어 업데이트 문제를 선택해 주세요.": {
+    "en": "Once internet access works, reopen this guide and select the update problem.",
+    "ja": "インターネットに接続できたら、このガイドを開き直して更新の問題を選んでください。"
+  },
+  "자세한 진행 내용 보기": {
+    "en": "View detailed progress",
+    "ja": "詳しい進行状況を見る"
+  },
+  "자체 코드 · MIT License": {
+    "en": "Project code · MIT License",
+    "ja": "独自コード · MIT License"
+  },
+  "자체 코드 라이선스 원문": {
+    "en": "Original project license text",
+    "ja": "独自コードのライセンス原文"
+  },
+  "자체 코드에는 MIT 라이선스가 적용됩니다. 외부 구성 요소에는 각각의 라이선스가 적용됩니다.": {
+    "en": "The project's own code uses the MIT License. External components have their own licenses.",
+    "ja": "独自コードにはMITライセンスが適用されます。外部コンポーネントにはそれぞれのライセンスが適用されます。"
+  },
+  "작업 중 업데이트 관련 서비스를 잠시 멈춥니다. 실행 전 안내를 읽고, 작업이 끝날 때까지 앱을 닫지 마세요.": {
+    "en": "Update services stop temporarily during this task. Read the instructions first and keep the app open until it finishes.",
+    "ja": "作業中は更新関連サービスを一時停止します。実行前の説明を読み、完了するまでアプリを閉じないでください。"
+  },
+  "작업 중인 문서는 먼저 저장해 주세요. 복구 도우미를 닫아도 컴퓨터는 예약된 시간에 꺼집니다.": {
+    "en": "Save open documents first. The computer will still shut down at the scheduled time even if you close this app.",
+    "ja": "作業中の文書を先に保存してください。このアプリを閉じても、予約した時刻にシャットダウンします。"
+  },
+  "작업에는 10분 이상 걸릴 수 있습니다. 급히 나가야 한다면 검사 및 복구를 취소한 뒤 앱을 닫으세요. 나중에 다시 검사할 수 있습니다.": {
+    "en": "This can take over 10 minutes. If you need to leave, cancel scan and repair before closing the app. You can scan again later.",
+    "ja": "10分以上かかる場合があります。急いで終了する場合は検査と修復をキャンセルしてから閉じてください。後で再検査できます。"
+  },
+  "작업에는 10분 이상 걸릴 수 있습니다. 저장장치 고장이나 모든 프로그램 오류를 고치는 도구는 아닙니다.": {
+    "en": "The task can take over 10 minutes. It cannot fix a failed drive or every app error.",
+    "ja": "10分以上かかる場合があります。ストレージの故障や、すべてのアプリのエラーを修復するツールではありません。"
+  },
+  "전원이 갑자기 꺼지거나, 심한 발열·이상한 소음이 있어요": {
+    "en": "Sudden power loss, excessive heat or unusual noise",
+    "ja": "突然電源が切れる、ひどい発熱や異音がある"
+  },
+  "전체 디스크 검사가 아니며, 검사 시간은 PC 상태에 따라 달라집니다.": {
+    "en": "This is not a full disk scan. Scan time depends on the PC's condition.",
+    "ja": "ディスク全体のスキャンではありません。所要時間はPCの状態によって異なります。"
+  },
+  "전체 작업 시간은 약 %s입니다. 문제가 계속되면 Windows를 다시 시작해 주세요.": {
+    "en": "Total time: about %s. Restart Windows if the problem continues.",
+    "ja": "合計所要時間は約%sです。問題が続く場合はWindowsを再起動してください。"
+  },
+  "전체적으로 느리지만 특별한 오류는 없어요": {
+    "en": "Everything is slow, but no particular errors appear",
+    "ja": "全体的に遅いが、特にエラーは出ない"
+  },
+  "정식 릴리스가 아닙니다": {
+    "en": "This is not a stable release",
+    "ja": "正式リリースではありません"
+  },
+  "종료 예약 취소는 Windows 데스크톱 앱에서 사용할 수 있습니다.": {
+    "en": "Cancel scheduled shutdown from the Windows desktop app.",
+    "ja": "シャットダウン予約の解除はWindowsデスクトップアプリで利用できます。"
+  },
+  "종료 예약과 이번 복구 후 자동 종료 설정을 취소했습니다.": {
+    "en": "Cancelled the scheduled shutdown and automatic shutdown for this repair.",
+    "ja": "シャットダウン予約と、今回の修復後の自動シャットダウンを解除しました。"
+  },
+  "종료 예약을 취소하지 못했습니다. Windows에서 shutdown /a로 취소해 주세요: %w": {
+    "en": "Could not cancel shutdown. Run shutdown /a in Windows to cancel it: %w",
+    "ja": "シャットダウン予約を解除できませんでした。Windowsでshutdown /aを実行して解除してください: %w"
+  },
+  "준비 중": {
+    "en": "Preparing",
+    "ja": "準備中"
+  },
+  "증상만으로 어떤 복구가 도움이 될지 고르기 어려운 상황입니다.": {
+    "en": "It is difficult to choose a repair based on these symptoms alone.",
+    "ja": "この症状だけでは、どの修復が役立つか判断しにくい状況です。"
+  },
+  "지금 종료": {
+    "en": "Exit now",
+    "ja": "今すぐ終了"
+  },
+  "지금 해결하고 싶은 문제 하나를 골라 주세요. 잘 모르겠어도 괜찮습니다.": {
+    "en": "Choose one problem you want to solve now. It is fine if you are unsure.",
+    "ja": "今解決したい問題をひとつ選んでください。よく分からなくても大丈夫です。"
+  },
+  "지원자가 알려준 보안 코드를 입력한 뒤 화면 공유를 승인합니다.": {
+    "en": "Enter the security code from your helper, then approve screen sharing.",
+    "ja": "支援者から教わったセキュリティコードを入力して、画面共有を許可します。"
+  },
+  "지정된 WebView2 경로를 사용할 수 없습니다.": {
+    "en": "The specified WebView2 path cannot be used.",
+    "ja": "指定されたWebView2のパスは使用できません。"
+  },
+  "직접 해본 단계까지만 골라 주세요. 잘 모르겠으면 첫 번째를 선택해도 됩니다.": {
+    "en": "Select only steps you have actually tried. If unsure, choose the first option.",
+    "ja": "実際に試した段階を選んでください。分からない場合は最初の選択肢を選べます。"
+  },
+  "진행 중인 복구 명령을 중단합니다. 이미 적용된 변경은 되돌리지 않으며, 재시작이 필요할 수 있습니다. 취소하시겠습니까?": {
+    "en": "This stops the running repair command. Changes already made will not be undone, and a restart may be needed. Cancel repair?",
+    "ja": "実行中の修復コマンドを停止します。適用済みの変更は元に戻らず、再起動が必要な場合があります。キャンセルしますか？"
+  },
+  "초기화 준비 중": {
+    "en": "Preparing reset",
+    "ja": "リセットを準備中"
+  },
+  "초기화 진행 중…": {
+    "en": "Resetting…",
+    "ja": "リセット中…"
+  },
+  "초기화가 끝나면 PC를 다시 시작하고 Windows 업데이트를 다시 시도해 보세요.": {
+    "en": "When reset finishes, restart the PC and try Windows Update again.",
+    "ja": "リセットが終わったらPCを再起動し、Windows Updateをもう一度お試しください。"
+  },
+  "초기화가 끝나면 PC를 다시 시작한 뒤 Windows 업데이트를 확인해 주세요.": {
+    "en": "When reset finishes, restart the PC, then check Windows Update.",
+    "ja": "リセットが終わったらPCを再起動し、Windows Updateを確認してください。"
+  },
+  "추천 내용을 읽고, 원하시면 해당 도구로 이동하세요. 아직 어떤 작업도 시작하지 않았습니다.": {
+    "en": "Read the recommendation, then go to the tool if you wish. No task has started yet.",
+    "ja": "おすすめの内容を読んでから、必要に応じてツールに移動してください。まだ作業は開始していません。"
+  },
+  "추천한 도구를 찾을 수 없습니다.": {
+    "en": "Could not find the recommended tool.",
+    "ja": "案内されたツールが見つかりませんでした。"
+  },
+  "취소 중…": {
+    "en": "Cancelling…",
+    "ja": "キャンセル中…"
+  },
+  "취소는 Windows 데스크톱 앱에서 사용할 수 있습니다.": {
+    "en": "Cancellation is available in the Windows desktop app.",
+    "ja": "キャンセルはWindowsデスクトップアプリで利用できます。"
+  },
+  "취소해도 이미 적용된 변경은 유지됩니다. 복구가 끝나지 않았을 수 있으므로 필요하면 재시작 후 다시 검사해 주세요.": {
+    "en": "Cancellation keeps changes already made. Repair may be incomplete, so restart and scan again if needed.",
+    "ja": "キャンセルしても適用済みの変更は維持されます。修復が未完了の場合があるため、必要に応じて再起動して再検査してください。"
+  },
+  "캐시 폴더를 확인합니다.": {
+    "en": "Checking cache folders.",
+    "ja": "キャッシュフォルダーを確認しています。"
+  },
+  "캐시를 안전하게 초기화하기 위해 관련 서비스를 잠시 중지합니다.": {
+    "en": "Temporarily stopping related services to reset the cache safely.",
+    "ja": "キャッシュを安全にリセットするため、関連サービスを一時停止します。"
+  },
+  "컴퓨터 종료 예약 취소": {
+    "en": "Cancel scheduled shutdown",
+    "ja": "シャットダウン予約を解除"
+  },
+  "컴퓨터가 켜지지 않거나 다시 시작을 반복해요": {
+    "en": "The computer will not start or keeps restarting",
+    "ja": "PCが起動しない、または再起動を繰り返す"
+  },
+  "탐지 및 조치 결과는 Windows 보안에서 확인할 수 있습니다.": {
+    "en": "Review threat detections and actions in Windows Security.",
+    "ja": "検出された脅威と対処結果はWindows セキュリティで確認できます。"
+  },
+  "특정 프로그램 하나만 느리거나 멈춰요": {
+    "en": "Only one app is slow or freezes",
+    "ja": "特定のアプリだけが遅い、または固まる"
+  },
+  "특정 프로그램 하나에서만 생겨요": {
+    "en": "Only one particular app is affected",
+    "ja": "特定のアプリひとつでだけ起きる"
+  },
+  "평소 쓰는 웹사이트가 열리는지 확인하고, Wi-Fi나 인터넷 케이블 연결을 살펴보세요.": {
+    "en": "Check whether a familiar website opens, and check Wi-Fi or the network cable.",
+    "ja": "普段使うウェブサイトが開くか、Wi-Fiやネットワークケーブルの接続を確認してください。"
+  },
+  "프로그램을 다시 열고, 업데이트나 제작사의 지원 안내를 확인해 보세요. 어렵다면 믿을 수 있는 지원자와 화면을 함께 보세요.": {
+    "en": "Reopen the app and check for updates or guidance from its developer. If needed, ask someone you trust to review the screen with you.",
+    "ja": "アプリを開き直し、更新や開発元のサポート情報を確認してください。難しい場合は信頼できる支援者に画面を一緒に見てもらいましょう。"
+  },
+  "필수 구성 요소 확인": {
+    "en": "Required components",
+    "ja": "必須コンポーネントの確認"
+  },
+  "하드웨어 고장 여부는 이 설문으로 확인할 수 없습니다. 시스템 파일 복구나 원격 지원만으로 해결되지 않을 수 있습니다.": {
+    "en": "This questionnaire cannot confirm hardware failure. System file repair or remote help alone may not resolve it.",
+    "ja": "この質問だけではハードウェアの故障を確認できません。システムファイルの修復やリモートサポートだけでは解決しない場合があります。"
+  },
+  "해당 프로그램을 먼저 확인하는 편이 좋겠습니다": {
+    "en": "Check the affected app first",
+    "ja": "まず問題のあるアプリを確認しましょう"
+  },
+  "현재 앱 버전을 확인할 수 없습니다: %w": {
+    "en": "Could not read the current app version: %w",
+    "ja": "現在のアプリのバージョンを確認できませんでした: %w"
+  },
+  "현재 앱은 실행되지 않는 다른 PC를 복구하지 못합니다. 장치에 따라 BitLocker 복구 키가 필요할 수 있습니다.": {
+    "en": "This running app cannot repair another PC that will not start. A BitLocker recovery key may be needed on some devices.",
+    "ja": "このアプリから、起動しない別のPCを修復することはできません。機器によってはBitLocker回復キーが必要です。"
+  },
+  "현재 최신 버전을 사용하고 있습니다.": {
+    "en": "You are using the latest version.",
+    "ja": "最新バージョンを使用しています。"
+  },
+  "화면 구성 요소가 종료되었습니다. 앱을 다시 실행해 주세요.": {
+    "en": "The display component stopped. Restart this app.",
+    "ja": "画面表示コンポーネントが終了しました。アプリを再起動してください。"
+  },
+  "화면 표시에는 Microsoft WebView2를 사용합니다. WebView2의 Microsoft Defender SmartScreen은 Microsoft 개인정보처리방침에 따라 이용 정보를 Microsoft에 전송할 수 있습니다. 아래 외부 구성 요소 고지에서 관련 안내와 약관을 확인할 수 있습니다.": {
+    "en": "This app uses Microsoft WebView2 for its interface. WebView2's Microsoft Defender SmartScreen may send usage information to Microsoft under Microsoft's privacy policy. See the third-party notices below for details and terms.",
+    "ja": "画面表示にはMicrosoft WebView2を使用します。WebView2のMicrosoft Defender SmartScreenは、Microsoftのプライバシーポリシーに基づき利用情報をMicrosoftへ送信する場合があります。詳細と規約は以下の外部コンポーネントの通知で確認できます。"
+  },
+  "확인 불가": {
+    "en": "Unavailable",
+    "ja": "確認できません"
+  },
+  "확인 중…": {
+    "en": "Checking…",
+    "ja": "確認中…"
+  },
+  "확인을 누르면 자동으로 설치합니다.": {
+    "en": "Select OK to install automatically.",
+    "ja": "「OK」を押すと自動的にインストールします。"
+  },
+  "복구 완료": {
+    "en": "Repair complete",
+    "ja": "修復完了"
+  },
+  "확인 필요": {
+    "en": "Needs attention",
+    "ja": "確認が必要"
+  },
+  "복구 진행 중": {
+    "en": "Repair in progress",
+    "ja": "修復中"
+  },
+  "질문 {count} · 최대 3개": {
+    "en": "Question {count} · Up to 3",
+    "ja": "質問 {count} · 最大3問"
+  },
+  "「{tool}」 버튼으로 이동": {
+    "en": "Go to {tool}",
+    "ja": "「{tool}」ボタンに移動"
+  },
+  "언어": {
+    "en": "Language",
+    "ja": "言語"
+  },
+  "시스템 설정 따르기": {
+    "en": "Follow system setting",
+    "ja": "システム設定に従う"
+  },
+  "언어 설정을 저장하지 못했습니다. 다시 시도해 주세요.": {
+    "en": "Could not save the language setting. Please try again.",
+    "ja": "言語設定を保存できませんでした。もう一度お試しください。"
+  },
+  "빠른 지원을 열 수 없습니다. Microsoft Store에서 빠른 지원 앱이 설치되어 있는지 확인해 주세요.": {
+    "en": "Could not open Quick Assist. Check that it is installed from Microsoft Store.",
+    "ja": "クイックアシストを開けませんでした。Microsoft Storeからインストールされているか確認してください。"
+  },
+  "Windows 업데이트 문제 해결사를 열 수 없습니다.": {
+    "en": "Could not open the Windows Update troubleshooter.",
+    "ja": "Windows Updateのトラブルシューティングを開けませんでした。"
+  },
+  "명령 출력은 Windows에서 제공한 원문입니다.": {
+    "en": "Command output is shown in its original Windows language.",
+    "ja": "コマンドの出力はWindowsが提供した原文で表示します。"
+  },
+  "질문 1 · 최대 3개": {
+    "en": "Question 1 · Up to 3",
+    "ja": "質問 1 · 最大3問"
+  },
+  "질문 2 · 최대 3개": {
+    "en": "Question 2 · Up to 3",
+    "ja": "質問 2 · 最大3問"
+  },
+  "질문 3 · 최대 3개": {
+    "en": "Question 3 · Up to 3",
+    "ja": "質問 3 · 最大3問"
+  },
+  "「업데이트 문제 해결」 버튼으로 이동": {
+    "en": "Go to Troubleshoot updates",
+    "ja": "「更新の問題を解決」ボタンに移動"
+  },
+  "「업데이트 캐시 초기화」 버튼으로 이동": {
+    "en": "Go to Reset update cache",
+    "ja": "「更新キャッシュをリセット」ボタンに移動"
+  },
+  "「검사 및 복구 시작」 버튼으로 이동": {
+    "en": "Go to Start scan and repair",
+    "ja": "「検査と修復を開始」ボタンに移動"
+  },
+  "「빠른 지원 열기」 버튼으로 이동": {
+    "en": "Go to Open Quick Assist",
+    "ja": "「クイックアシストを開く」ボタンに移動"
+  },
+  "「Defender 빠른 검사」 버튼으로 이동": {
+    "en": "Go to Defender quick scan",
+    "ja": "「Defender クイックスキャン」ボタンに移動"
+  },
+  "「Windows 보안 · 검사 결과 보기」 버튼으로 이동": {
+    "en": "Go to Windows Security · Scan results",
+    "ja": "「Windows セキュリティ · 検査結果」ボタンに移動"
+  }
+}
