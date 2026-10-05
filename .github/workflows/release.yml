@@ -18,22 +18,31 @@ jobs:
       run:
         shell: pwsh
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-go@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-go@v6
         with:
           go-version: '1.27.1'
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
           node-version: '22'
           cache: npm
           cache-dependency-path: frontend/package-lock.json
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.12'
       - name: Install Wails CLI
         run: go install github.com/wailsapp/wails/v2/cmd/wails@v2.14.0
       - name: Build and verify release
-        run: ./scripts/build-release.ps1
+        run: |
+          try {
+            & ./scripts/build-release.ps1 *>&1 | Tee-Object -File release-build.log
+          } catch {
+            $lines = if (Test-Path release-build.log) { Get-Content release-build.log -Tail 80 } else { @() }
+            $detail = ($lines -join "`n") + "`n" + ($_ | Out-String)
+            $detail = $detail.Replace('%', '%25').Replace("`r", '%0D').Replace("`n", '%0A')
+            Write-Output "::error title=Windows release build failed::$detail"
+            exit 1
+          }
       - name: Publish versioned downloads
         env:
           GH_TOKEN: ${{ github.token }}
