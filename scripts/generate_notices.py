@@ -14,7 +14,7 @@ NAMES = {'license', 'licence', 'copying', 'notice', 'patents', 'copyright'}
 
 def run(*args):
     env = dict(os.environ, GOOS='windows', GOARCH='amd64', CGO_ENABLED='0')
-    return subprocess.check_output(args, cwd=ROOT, env=env, text=True)
+    return subprocess.check_output(args, cwd=ROOT, env=env, text=True, encoding='utf-8')
 
 
 def objects(text):
@@ -112,13 +112,13 @@ See the Microsoft section below for runtime notices and terms.
             'Go module selected by the Windows production dependency graph; unmodified upstream source.')
 
     vite = ROOT / 'frontend/node_modules/vite'
-    version = json.loads((vite / 'package.json').read_text())['version']
+    version = json.loads((vite / 'package.json').read_text(encoding='utf-8'))['version']
     add('Vite', version, vite, [vite / 'LICENSE.md'],
         'Build-time tool. Includes upstream bundled notices conservatively; the generated frontend may include the modulepreload helper. Node.js and the Vite server are not shipped.')
     add('Unicode data', 'license snapshot 2026-09-12', ROOT / 'legal',
         [ROOT / 'legal/UNICODE-LICENSE.txt'],
         'Unicode tables are used by Go and dependencies including uniseg. Source: https://www.unicode.org/license.txt')
-    sections.append('\n' + '=' * 78 + '\n' + (ROOT / 'legal/MICROSOFT-WEBVIEW2-NOTICE.txt').read_text())
+    sections.append('\n' + '=' * 78 + '\n' + (ROOT / 'legal/MICROSOFT-WEBVIEW2-NOTICE.txt').read_text(encoding='utf-8'))
     add('Microsoft Edge WebView2 Runtime terms', 'snapshot 2026-09-12', ROOT / 'legal',
         [ROOT / 'legal/MICROSOFT-WEBVIEW2-TERMS.txt'],
         'Official Evergreen distribution terms: https://developer.microsoft.com/microsoft-edge/api/eula/webview2 ; HTML converted to plain text without changing the wording.')
@@ -133,10 +133,10 @@ See the Microsoft section below for runtime notices and terms.
                ROOT / 'legal/dependency-inventory.json': json.dumps(inventory, indent=2, ensure_ascii=False) + '\n'}
     for path, text in outputs.items():
         if args.check:
-            if not path.exists() or path.read_text() != text:
+            if not path.exists() or path.read_text(encoding='utf-8') != text:
                 raise SystemExit('Outdated generated file: ' + str(path.relative_to(ROOT)))
         else:
-            path.write_text(text)
+            path.write_text(text, encoding='utf-8')
     print(('Verified' if args.check else 'Generated') + f' notices for {len(modules)} Go modules, {go_version}, Vite and Unicode.')
 
 
