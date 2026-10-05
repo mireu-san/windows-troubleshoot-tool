@@ -21,7 +21,7 @@ import (
 )
 
 // Override at release build time with -ldflags "-X main.appVersion=2026.09.13".
-var appVersion = "2026.09.16"
+var appVersion = "2026.10.05"
 
 const releasesURL = "https://github.com/mireu-san/windows-troubleshoot-tool/releases"
 const latestReleaseAPI = "https://api.github.com/repos/mireu-san/windows-troubleshoot-tool/releases/latest"

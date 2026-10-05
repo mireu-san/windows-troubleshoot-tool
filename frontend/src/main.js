@@ -1,10 +1,12 @@
 import { initI18n, mountLanguagePicker, t } from './i18n.js';
 import './style.css';
 import { mountGuidance } from './guidance-ui.js';
+import { mountGraphics } from './graphics-ui.js';
 import projectLicense from '../../LICENSE?raw';
 import thirdPartyNotices from '../../THIRD_PARTY_NOTICES.txt?raw';
 import {
   StartRepair,
+  ExportRepairDiagnostics,
   CancelRepair,
   CancelScheduledShutdown,
   IsRunning,
@@ -63,6 +65,12 @@ app.innerHTML = `
         <div class="step" data-step="dism"><span>1</span><div><strong>Windows 구성 요소 복구</strong><small>DISM 상태 복원</small></div></div>
         <div class="step" data-step="sfc"><span>2</span><div><strong>시스템 파일 검사</strong><small>SFC 정밀 검사</small></div></div>
       </div>
+      <section class="debug-panel" id="debugPanel" hidden aria-live="polite">
+        <h3>디버깅 모드 활성화됨</h3>
+        <p>실패 당시의 실행 명령, 종료 오류와 해당 시간대의 DISM·CBS 로그를 저장할 수 있습니다. 앱을 닫기 전에 저장하고, 사용자 이름과 경로를 확인한 뒤 공유해 주세요.</p>
+        <button class="secondary" id="exportDiagnostics">실패 로그 저장</button>
+        <p id="debugStatus" data-i18n-skip></p>
+      </section>
       <details class="details"><summary>자세한 진행 내용 보기</summary><p class="hint">명령 출력은 Windows에서 제공한 원문입니다.</p><pre id="output" aria-live="polite"></pre></details>
     </section>
 
@@ -160,6 +168,7 @@ app.innerHTML = `
   </dialog>`;
 
 mountGuidance({ isRunning: IsRunning, openRecoveryHelp: OpenRecoveryHelp });
+mountGraphics();
 mountLanguagePicker(document.querySelector('.header-actions'));
 
 document.querySelector('#developerInfoButton').addEventListener('click', () => document.querySelector('#developerInfo').showModal());
@@ -354,7 +363,28 @@ cancelRepairButton.addEventListener('click', async () => {
   catch (error) { window.alert(t(String(error))); cancelRepairButton.disabled = false; cancelRepairButton.textContent = '검사 및 복구 취소'; }
 });
 
+const debugPanel = document.querySelector('#debugPanel');
+const exportDiagnostics = document.querySelector('#exportDiagnostics');
+exportDiagnostics.addEventListener('click', async () => {
+  exportDiagnostics.disabled = true;
+  try {
+    const path = await ExportRepairDiagnostics();
+    if (path) document.querySelector('#debugStatus').textContent = path;
+  } catch (error) {
+    document.querySelector('#debugStatus').textContent = t(String(error));
+  } finally { exportDiagnostics.disabled = false; }
+});
+
 function setState(event) {
+  if (event.stage === 'starting') {
+    debugPanel.hidden = true;
+    document.querySelector('#debugStatus').textContent = '';
+  }
+  if (event.debugAvailable) {
+    debugPanel.hidden = false;
+    els.output.closest('details').open = true;
+  }
+  if (event.stage === 'debugging') cancelRepairButton.hidden = true;
   shutdownAfterRepair.disabled = !['complete', 'error', 'cancelled'].includes(event.stage);
   if (event.shutdownScheduled) {
     shutdownStatus.textContent = '복구가 완료되어 5분 뒤 컴퓨터가 종료됩니다. 취소하려면 종료 예약 취소를 누르세요.';

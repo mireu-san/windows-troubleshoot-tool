@@ -1478,5 +1478,301 @@
   "「Windows 보안 · 검사 결과 보기」 버튼으로 이동": {
     "en": "Go to Windows Security · Scan results",
     "ja": "「Windows セキュリティ · 検査結果」ボタンに移動"
+  },
+  "디버깅 모드 활성화됨": {
+    "en": "Debug mode enabled",
+    "ja": "デバッグモードが有効です"
+  },
+  "실패 로그 저장": {
+    "en": "Save failure logs",
+    "ja": "失敗ログを保存"
+  },
+  "실패 로그 수집 중": {
+    "en": "Collecting failure logs",
+    "ja": "失敗ログを収集中"
+  },
+  "이번 실행 시간대의 DISM·CBS 로그를 보존하고 있습니다.": {
+    "en": "Capturing DISM/CBS logs from this execution window.",
+    "ja": "今回の実行時間帯のDISM・CBSログを保存しています。"
+  },
+  "저장할 실패 로그가 없습니다": {
+    "en": "No failure logs are available to save",
+    "ja": "保存できる失敗ログがありません"
+  },
+  "실패 로그 저장은 Windows 데스크톱 앱에서 사용할 수 있습니다.": {
+    "en": "Saving failure logs is available in the Windows desktop app.",
+    "ja": "失敗ログの保存はWindowsデスクトップアプリで利用できます。"
+  },
+  "실패 당시의 실행 명령, 종료 오류와 해당 시간대의 DISM·CBS 로그를 저장할 수 있습니다. 앱을 닫기 전에 저장하고, 사용자 이름과 경로를 확인한 뒤 공유해 주세요.": {
+    "en": "Save the failed command, exit error, and DISM/CBS logs from that run before closing the app. Review user names and paths before sharing.",
+    "ja": "アプリを閉じる前に、失敗したコマンド、終了エラー、実行時間帯のDISM・CBSログを保存してください。共有前にユーザー名とパスを確認してください。"
+  },
+  "그래픽·화면 깜박임 진단": {
+    "en": "Graphics and screen flicker diagnosis",
+    "ja": "グラフィックス・画面ちらつき診断"
+  },
+  "내장·외장 GPU와 드라이버를 확인하고, 화면 깜박임과 관련된 기록을 분석합니다.": {
+    "en": "Inspect integrated and discrete GPUs, drivers, and records related to screen flicker.",
+    "ja": "内蔵・外付けGPUとドライバーを確認し、画面のちらつきに関連する記録を分析します。"
+  },
+  "그래픽 검사 / 업데이트 후 재검사": {
+    "en": "Scan graphics / Recheck after updating",
+    "ja": "グラフィックスを検査 / 更新後に再検査"
+  },
+  "지금 깜박였어요": {
+    "en": "The screen just flickered",
+    "ja": "今、画面がちらつきました"
+  },
+  "깜박임을 기록하면 전후 2분 범위를 확인합니다. 잠시 후 다시 검사하면 이후 기록도 포함합니다. 최근 기록이 없으면 지난 7일을 검사합니다.": {
+    "en": "Marking flicker checks a two-minute window on either side. Scan again shortly to include later events. Without a recent marker, the scan covers the last seven days.",
+    "ja": "ちらつきの時刻を記録すると前後2分間を確認します。少し待って再検査すると、その後の記録も含まれます。最近の時刻記録がなければ過去7日間を検査します。"
+  },
+  "연결된 모니터": {
+    "en": "Connected monitors",
+    "ja": "接続されたモニター"
+  },
+  "진단 근거와 다음 조치": {
+    "en": "Evidence and next steps",
+    "ja": "診断の根拠と次の手順"
+  },
+  "Windows에 재부팅 대기 상태가 있습니다. 그래픽 업데이트 때문인지는 확인되지 않았습니다.": {
+    "en": "Windows has a pending restart. It is not necessarily related to graphics updates.",
+    "ja": "Windowsは再起動待ちです。グラフィックス更新によるものかは確認されていません。"
+  },
+  "이벤트 원문과 수집 제한 보기": {
+    "en": "View raw events and collection limits",
+    "ja": "イベント原文と収集の制限を表示"
+  },
+  "그래픽 진단 보고서 저장": {
+    "en": "Save graphics diagnostic report",
+    "ja": "グラフィックス診断レポートを保存"
+  },
+  "고급 디스플레이 설정": {
+    "en": "Advanced display settings",
+    "ja": "ディスプレイの詳細設定"
+  },
+  "장치 관리자": {
+    "en": "Device Manager",
+    "ja": "デバイスマネージャー"
+  },
+  "PC 제조사 드라이버 지원": {
+    "en": "PC manufacturer driver support",
+    "ja": "PCメーカーのドライバーサポート"
+  },
+  "업데이트 도구에서 설치를 완료한 뒤 재검사하세요. 버전 변경은 확인할 수 있지만 깜박임 해결 여부는 직접 확인해야 합니다.": {
+    "en": "Finish installation in the update tool, then scan again. Version changes can be detected; check whether flicker has stopped yourself.",
+    "ja": "更新ツールでインストールを完了してから再検査してください。バージョン変更は検出できますが、ちらつきの改善はご自身で確認してください。"
+  },
+  "깜박임 증상으로 원인 좁히기": {
+    "en": "Narrow down the cause using symptoms",
+    "ja": "ちらつきの症状から原因を絞り込む"
+  },
+  "작업 관리자도 함께 깜박이나요?": {
+    "en": "Does Task Manager flicker too?",
+    "ja": "タスクマネージャーもちらつきますか？"
+  },
+  "모르겠어요": {
+    "en": "Not sure",
+    "ja": "わかりません"
+  },
+  "네": {
+    "en": "Yes",
+    "ja": "はい"
+  },
+  "아니요": {
+    "en": "No",
+    "ja": "いいえ"
+  },
+  "어디에서 발생하나요?": {
+    "en": "Where does it happen?",
+    "ja": "どこで発生しますか？"
+  },
+  "특정 앱에서만": {
+    "en": "Only in one app",
+    "ja": "特定のアプリのみ"
+  },
+  "외부 모니터에서만": {
+    "en": "Only on an external monitor",
+    "ja": "外部モニターのみ"
+  },
+  "화면 전체에서": {
+    "en": "Across the whole screen",
+    "ja": "画面全体"
+  },
+  "드라이버 업데이트 직후 시작됐나요?": {
+    "en": "Did it start just after a driver update?",
+    "ja": "ドライバー更新の直後に始まりましたか？"
+  },
+  "GPU 정보를 가져오지 못했습니다. 수집 제한을 확인해 주세요.": {
+    "en": "Could not retrieve GPU information. Review collection limits.",
+    "ja": "GPU情報を取得できませんでした。収集の制限を確認してください。"
+  },
+  "드라이버 날짜는 설치 날짜가 아닙니다.": {
+    "en": "The driver date is not the installation date.",
+    "ja": "ドライバーの日付はインストール日ではありません。"
+  },
+  "업데이트 도구 실행": {
+    "en": "Open update tool",
+    "ja": "更新ツールを起動"
+  },
+  "모니터 연결 정보를 확인하지 못했습니다.": {
+    "en": "Monitor connection information is unavailable.",
+    "ja": "モニターの接続情報を確認できませんでした。"
+  },
+  "업데이트 전 저장 상태와 비교: ": {
+    "en": "Compared with the saved pre-update state: ",
+    "ja": "更新前の保存状態と比較: "
+  },
+  " · 드라이버 버전 변경이 확인되지 않았습니다.": {
+    "en": " · No driver version change was detected.",
+    "ja": " · ドライバーのバージョン変更は確認されませんでした。"
+  },
+  "처리 중입니다…": {
+    "en": "Working…",
+    "ja": "処理中…"
+  },
+  "검사를 마쳤습니다. 진단 근거와 수집 제한을 확인해 주세요.": {
+    "en": "Scan finished. Review the evidence and collection limits.",
+    "ja": "検査が完了しました。診断の根拠と収集の制限を確認してください。"
+  },
+  "저장을 취소했습니다.": {
+    "en": "Save cancelled.",
+    "ja": "保存をキャンセルしました。"
+  },
+  "Windows 도구를 열었습니다.": {
+    "en": "Opened the Windows tool.",
+    "ja": "Windowsツールを開きました。"
+  },
+  "그래픽 진단은 Windows 데스크톱 앱에서 사용할 수 있습니다.": {
+    "en": "Graphics diagnostics are available in the Windows desktop app.",
+    "ja": "グラフィックス診断はWindowsデスクトップアプリで利用できます。"
+  },
+  "작업 관리자도 깜박이면 디스플레이 드라이버 문제를 의심할 단서입니다. 자동 검사 결과와 함께 확인하세요.": {
+    "en": "Flicker in Task Manager suggests a possible display driver issue. Compare this with the scan results.",
+    "ja": "タスクマネージャーのちらつきはディスプレイドライバーの問題を疑う手がかりです。検査結果と合わせて確認してください。"
+  },
+  "작업 관리자는 정상이고 다른 화면만 깜박이면 앱 호환성 문제를 의심할 단서입니다.": {
+    "en": "If Task Manager is stable while other content flickers, app compatibility may be involved.",
+    "ja": "タスクマネージャーが正常で他の画面だけちらつく場合、アプリの互換性が関係している可能性があります。"
+  },
+  "해당 앱을 업데이트하고 하드웨어 가속 설정을 한 번에 하나씩 바꿔 재현 여부를 비교하세요.": {
+    "en": "Update the app and test hardware acceleration settings one at a time to compare symptoms.",
+    "ja": "アプリを更新し、ハードウェアアクセラレーション設定を一つずつ変更して症状を比較してください。"
+  },
+  "외부 모니터의 케이블·포트·도킹 장치를 바꿔 비교하고, 고급 디스플레이 설정에서 주사율을 확인하세요.": {
+    "en": "Compare external monitor cables, ports, and docks, and check the refresh rate in advanced display settings.",
+    "ja": "外部モニターのケーブル・ポート・ドックを変えて比較し、ディスプレイの詳細設定でリフレッシュレートを確認してください。"
+  },
+  "업데이트 직후 시작됐다면 장치 관리자에서 이전 드라이버로 되돌리기가 가능한지 확인하세요.": {
+    "en": "If it started after an update, check Device Manager for the option to roll back the driver.",
+    "ja": "更新直後に始まった場合は、デバイスマネージャーで以前のドライバーに戻せるか確認してください。"
+  },
+  "깜박일 때 작업 관리자도 영향을 받는지, 특정 앱이나 모니터에서만 발생하는지 확인해 주세요.": {
+    "en": "Check whether Task Manager flickers and whether it affects only one app or monitor.",
+    "ja": "タスクマネージャーもちらつくか、特定のアプリやモニターのみで発生するか確認してください。"
+  },
+  "이 안내는 원인을 좁히기 위한 단서이며 Intel 내장 그래픽이나 GPU 하드웨어 고장을 확정하지 않습니다.": {
+    "en": "These clues help narrow down the cause; they do not establish an Intel integrated graphics or GPU hardware fault.",
+    "ja": "この案内は原因を絞り込む手がかりであり、Intel内蔵グラフィックスやGPUの故障を確定するものではありません。"
+  },
+  "그래픽 장치 오류가 보고되었습니다": {
+    "en": "A graphics device error was reported",
+    "ja": "グラフィックスデバイスのエラーが報告されました"
+  },
+  "장치 관리자에서 해당 장치 상태를 확인하고 드라이버 업데이트를 진행하세요.": {
+    "en": "Check this device in Device Manager and proceed with a driver update.",
+    "ja": "デバイスマネージャーで状態を確認し、ドライバーを更新してください。"
+  },
+  "기본 디스플레이 드라이버 사용 중": {
+    "en": "Basic display driver in use",
+    "ja": "基本ディスプレイドライバーを使用中"
+  },
+  "감지된 GPU 제조사의 드라이버 또는 PC 제조사 드라이버를 확인하세요.": {
+    "en": "Check drivers from the detected GPU vendor or the PC manufacturer.",
+    "ja": "検出されたGPUメーカーまたはPCメーカーのドライバーを確認してください。"
+  },
+  "디스플레이 드라이버 복구 기록 발견": {
+    "en": "Display driver recovery recorded",
+    "ja": "ディスプレイドライバーの回復記録を検出"
+  },
+  "발생 시각과 깜박임 시각을 비교하고 관련 드라이버를 확인하세요. 이 기록만으로 고장 원인을 확정할 수 없습니다.": {
+    "en": "Compare the event and flicker times and check the relevant driver. This record alone cannot establish the cause.",
+    "ja": "イベントとちらつきの時刻を比較し、関連ドライバーを確認してください。この記録だけでは原因を確定できません。"
+  },
+  "GPU 시간 초과 관련 기록 발견": {
+    "en": "GPU timeout record found",
+    "ja": "GPUタイムアウトに関連する記録を検出"
+  },
+  "드라이버와 하드웨어 양쪽을 점검할 단서입니다. 제조사 드라이버와 증상 발생 조건을 확인하세요.": {
+    "en": "This is a clue to check both drivers and hardware. Review vendor drivers and the conditions that trigger the symptom.",
+    "ja": "ドライバーとハードウェアの両方を点検する手がかりです。メーカーのドライバーと症状の発生条件を確認してください。"
+  },
+  "화면 구성 프로그램 오류 기록 발견": {
+    "en": "Desktop component crash recorded",
+    "ja": "画面構成プログラムのエラー記録を検出"
+  },
+  "특정 앱 실행 시 발생하는지 확인하고 앱 업데이트와 하드웨어 가속 설정을 점검하세요.": {
+    "en": "Check whether one app triggers this, and review app updates and hardware acceleration settings.",
+    "ja": "特定のアプリで発生するか確認し、アプリの更新とハードウェアアクセラレーション設定を点検してください。"
+  },
+  "시스템 하드웨어 오류 기록 발견": {
+    "en": "System hardware error recorded",
+    "ja": "システムハードウェアのエラー記録を検出"
+  },
+  "이 기록은 GPU 고장을 뜻하지 않습니다. 이벤트 세부 정보에서 관련 장치를 확인하세요.": {
+    "en": "This does not establish a GPU fault. Check the event details for the affected device.",
+    "ja": "この記録はGPU故障を意味しません。イベントの詳細で関連デバイスを確認してください。"
+  },
+  "그래픽 장치 구성 기록 발견": {
+    "en": "Graphics device configuration recorded",
+    "ja": "グラフィックスデバイスの構成記録を検出"
+  },
+  "드라이버 변경 시각과 증상 시작 시점을 비교하세요. DriverDate는 설치 시각이 아닙니다.": {
+    "en": "Compare driver changes with symptom onset. DriverDate is not the installation time.",
+    "ja": "ドライバー変更と症状の開始時刻を比較してください。DriverDateはインストール時刻ではありません。"
+  },
+  "그래픽 관련 이벤트 발견": {
+    "en": "Graphics-related event found",
+    "ja": "グラフィックス関連イベントを検出"
+  },
+  "이벤트 원문과 증상 발생 시각을 함께 확인하세요.": {
+    "en": "Review the original event with the symptom time.",
+    "ja": "イベント原文と症状の発生時刻を合わせて確認してください。"
+  },
+  "관련 오류 근거를 찾지 못했습니다": {
+    "en": "No relevant error evidence found",
+    "ja": "関連するエラーの根拠は見つかりませんでした"
+  },
+  "로그가 없어도 정상이라고 확정할 수 없습니다. 증상 질문과 케이블·모니터 점검을 함께 진행하세요.": {
+    "en": "No logs does not mean everything is healthy. Also use the symptom questions and check cables and monitors.",
+    "ja": "ログがなくても正常とは確定できません。症状の質問とケーブル・モニターの点検も行ってください。"
+  },
+  "다른 작업이 진행 중입니다. 완료 후 다시 시도해 주세요.": {
+    "en": "Another operation is running. Try again after it finishes.",
+    "ja": "別の処理を実行中です。完了後に再試行してください。"
+  },
+  "먼저 그래픽 검사를 실행하고 감지된 제조사를 선택해 주세요.": {
+    "en": "Run a graphics scan first, then choose a detected vendor.",
+    "ja": "先にグラフィックス検査を実行し、検出されたメーカーを選択してください。"
+  },
+  "제조사 업데이트 도구를 실행했습니다. 도구에서 설치를 마친 뒤 다시 검사해 주세요.": {
+    "en": "Opened the vendor update tool. Finish installation there, then scan again.",
+    "ja": "メーカーの更新ツールを起動しました。インストールを完了してから再検査してください。"
+  },
+  "공식 업데이트 페이지를 열었습니다. 도구 설치 또는 드라이버 업데이트를 진행한 뒤 다시 검사해 주세요.": {
+    "en": "Opened the official update page. Install the tool or update the driver, then scan again.",
+    "ja": "公式更新ページを開きました。ツールのインストールまたはドライバーの更新後に再検査してください。"
+  },
+  "먼저 그래픽 검사를 실행해 주세요.": {
+    "en": "Run a graphics scan first.",
+    "ja": "先にグラフィックス検査を実行してください。"
+  },
+  "PC 제조사 지원 사이트에서 위에 표시된 모델의 그래픽 드라이버를 확인해 주세요.": {
+    "en": "Visit your PC manufacturer's support site for graphics drivers for the model shown above.",
+    "ja": "PCメーカーのサポートサイトで、上に表示されたモデルのグラフィックスドライバーを確認してください。"
+  },
+  "PC 제조사 지원 페이지에서 해당 모델의 그래픽 드라이버를 확인해 주세요.": {
+    "en": "Check your model's graphics drivers on the PC manufacturer's support page.",
+    "ja": "PCメーカーのサポートページで、該当モデルのグラフィックスドライバーを確認してください。"
   }
 }

@@ -9,6 +9,9 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Frontend tests failed.' }
     npm --prefix frontend run build
     if ($LASTEXITCODE -ne 0) { throw 'Frontend build failed.' }
+    go test ./...
+    if ($LASTEXITCODE -ne 0) { throw 'Backend tests failed.' }
+    & (Join-Path $PSScriptRoot 'test-graphics.ps1')
     python scripts/generate_notices.py
     if ($LASTEXITCODE -ne 0) { throw 'Notice generation failed.' }
     wails build -clean -platform windows/amd64 -webview2 browser

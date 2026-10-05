@@ -14,6 +14,7 @@ const microsoftHelpURL = "https://support.microsoft.com/ko-kr/windows/experience
 
 type RepairEvent struct {
 	Stage             string `json:"stage"`
+	DebugAvailable    bool   `json:"debugAvailable,omitempty"`
 	Title             string `json:"title"`
 	Message           string `json:"message"`
 	Output            string `json:"output,omitempty"`
@@ -37,6 +38,8 @@ type commandRunner interface {
 }
 
 type App struct {
+	graphicsReport      *GraphicsReport
+	graphicsMarker      time.Time
 	languageMu          sync.RWMutex
 	languagePreference  string
 	ctx                 context.Context
@@ -44,6 +47,7 @@ type App struct {
 	emitEvent           func(RepairEvent)
 	mu                  sync.Mutex
 	running             bool
+	diagnosticReport    []byte
 	appDownloadURL      string
 	appUpdateDigest     string
 	appUpdateName       string
@@ -215,20 +219,25 @@ func (a *App) runRepair(ctx context.Context) {
 	}
 
 	started := time.Now()
+	var console diagnosticTail
 	for _, step := range steps {
 		if cancelled() {
 			return
 		}
+		fmt.Fprintf(&console, "\nCommand: %s %v\n", step.Name, step.Args)
 		a.emit(RepairEvent{Stage: step.Stage, Title: step.Title, Message: step.StartText, Progress: step.ProgressMin})
 		err := a.runner.Run(ctx, step, func(line string, progress int) {
+			fmt.Fprintln(&console, line)
 			a.emit(RepairEvent{Stage: step.Stage, Title: step.Title, Message: step.StartText, Output: line, Progress: progress})
 		})
 		if cancelled() {
 			return
 		}
 		if err != nil {
+			a.captureRepairFailure(started, step, err, console.String())
 			a.emit(RepairEvent{
-				Stage: "error", Title: "복구를 완료하지 못했습니다",
+				DebugAvailable: true,
+				Stage:          "error", Title: "복구를 완료하지 못했습니다",
 				Message: friendlyError(step, err), Output: err.Error(), Progress: step.ProgressMin,
 			})
 			return

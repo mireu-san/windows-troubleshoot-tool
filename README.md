@@ -97,14 +97,14 @@ Choosing **Install** closes the app, replaces the executable, and restarts it. C
 
 The app does not install an update if downloading fails or the verification digest is missing or does not match. Automatic updates require an executable attached to a GitHub Release.
 
-The current default version is `2026.09.16`. Specify the version when building a release on Windows:
+The current default version is `2026.10.05`. Specify the version when building a release on Windows:
 
 ```powershell
-wails build -clean -platform windows/amd64 -webview2 browser -ldflags "-X main.appVersion=2026.09.16"
+wails build -clean -platform windows/amd64 -webview2 browser -ldflags "-X main.appVersion=2026.10.05"
 ```
 
 1. Commit the changes and push them to GitHub.
-2. Create a stable release with a tag such as `v2026.09.16`. The tag must match the version embedded in the build. Supported formats are `vYYYY.MM.DD` and `vYYYY.MM.DD.N`; increment the last number for additional releases on the same day. See the compatibility notes below before adopting a four-part tag.
+2. Create a stable release with a tag such as `v2026.10.05`. The tag must match the version embedded in the build. Supported formats are `vYYYY.MM.DD` and `vYYYY.MM.DD.N`; increment the last number for additional releases on the same day. See the compatibility notes below before adopting a four-part tag.
 3. Prepare the compatibility executable and ZIP described under **Distribution Filenames**, then attach both to the release. Automatic updates select `WindowsSystemRepairHelper.exe` first. If distributing only an installer, name it `WindowsSystemRepairHelper-amd64-installer.exe`. These naming rules apply to Windows x64 builds.
 4. Publish the release as the latest stable release, with the prerelease option disabled.
 5. Launch an older app version and verify that it checks for updates, downloads the new executable, and displays the installation prompt.
@@ -136,19 +136,19 @@ While the app tracks a pending shutdown, it blocks new scans, repairs, and app u
 
 ### Version Comparison and Release Compatibility
 
-This release uses `v2026.09.16`, which the older `2026.09.12` app can recognize. The current app compares three-part and four-part versions numerically, treating an omitted fourth part as zero. Version comparison does not use the computer's date or time. The older `2026.09.12` app recognizes only three-part versions, so it cannot directly update to a four-part release tag.
+This release uses `v2026.10.05`, which the older `2026.09.12` app can recognize. The current app compares three-part and four-part versions numerically, treating an omitted fourth part as zero. Version comparison does not use the computer's date or time. The older `2026.09.12` app recognizes only three-part versions, so it cannot directly update to a four-part release tag.
 
 Build this version with:
 
 ```powershell
-wails build -clean -platform windows/amd64 -webview2 browser -ldflags "-X main.appVersion=2026.09.16"
+wails build -clean -platform windows/amd64 -webview2 browser -ldflags "-X main.appVersion=2026.10.05"
 ```
 
-Use `v2026.09.16` as the stable release tag and attach the compatibility executable named `WindowsSystemRepairHelper.exe`.
+Use `v2026.10.05` as the stable release tag and attach the compatibility executable named `WindowsSystemRepairHelper.exe`.
 
 ## Distribution Filenames
 
-Builds use the executable name configured in `wails.json`. Preserve that filename inside a ZIP for manual downloads because GitHub may normalize non-ASCII release attachment names. For example, name the ZIP `windows-system-repair-helper-2026.09.16.zip`.
+Builds use the executable name configured in `wails.json`. Preserve that filename inside a ZIP for manual downloads because GitHub may normalize non-ASCII release attachment names. For example, name the ZIP `windows-system-repair-helper-2026.10.05.zip`.
 
 For compatibility with automatic updates in existing apps, copy the same executable to `WindowsSystemRepairHelper.exe` and attach it alongside the ZIP. The executable inside the ZIP and the compatibility executable must contain identical bytes. Automatic updates preserve the existing executable path, so they do not rename files already installed on a user's computer.
 
@@ -156,7 +156,7 @@ For compatibility with automatic updates in existing apps, copy the same executa
 $buildConfig = Get-Content 'wails.json' -Raw | ConvertFrom-Json
 $executablePath = Join-Path 'build/bin' ($buildConfig.outputfilename + '.exe')
 Copy-Item -LiteralPath $executablePath -Destination 'build/bin/WindowsSystemRepairHelper.exe'
-Compress-Archive -LiteralPath $executablePath -DestinationPath 'build/bin/windows-system-repair-helper-2026.09.16.zip' -Force
+Compress-Archive -LiteralPath $executablePath -DestinationPath 'build/bin/windows-system-repair-helper-2026.10.05.zip' -Force
 ```
 
 ## Distribution Notices
@@ -172,3 +172,23 @@ powershell -ExecutionPolicy Bypass -File scripts/build-release.ps1
 This regenerates notices, builds using the WebView2 browser strategy, checks the EXE's module versions and toolchain against the notices, and packages the executable with `LICENSE` and `THIRD_PARTY_NOTICES.txt`. If the dependency versions or toolchain change, review the generated diff before publishing. Use a new version for a new public release; these source changes do not replace the already published `2026.09.13` assets.
 
 WebView2 includes Microsoft Defender SmartScreen, which collects and sends end-user information to Microsoft as described in the [Microsoft Privacy Statement](https://aka.ms/privacy) and [Microsoft Edge Privacy Whitepaper](https://learn.microsoft.com/en-us/microsoft-edge/privacy-whitepaper#smartscreen). This independent application is not sponsored or endorsed by Microsoft.
+
+### Failure diagnostics
+
+When DISM or SFC exits with an error, the app enables debug mode and captures a snapshot before allowing a retry. Select **Save failure logs** to export a UTF-8 text report containing the execution start/end times (with timezone), failed command, exit error, console output, and DISM/CBS records from that execution window. The report stays in memory until the app closes or another failure replaces it; save it before closing the app.
+
+Collection includes `dism.log`, `dism.log.bak`, `CBS.log`, and up to eight recent `CbsPersist` archives, including CAB files extracted with Windows `expand.exe`. All log severities and continuation lines are retained within the time window. Each source retains its last 2 MiB; truncation, missing files, extraction failures, and empty windows are explicitly reported. CAB extraction has a 15-second timeout per archive. Concurrent Windows servicing activity may appear in the same window. Logs are saved locally and are not uploaded; review paths and user names before sharing.
+
+## Graphics and screen flicker diagnostics
+
+Use **Scan graphics / Recheck after updating** to collect Intel, AMD, and NVIDIA display adapters, their driver versions and device problem codes, active monitor paths, and relevant events from the last seven days. Vendor routing uses PCI hardware IDs rather than CPU names. Hybrid systems show all detected adapters. Unsupported or unavailable information is explicitly reported; a scan with no matching events does not establish that the system is healthy.
+
+**The screen just flickered** records the current time and scans the preceding two minutes. Re-scan shortly afterward to include up to two minutes after the marker. Markers expire after ten minutes, returning scans to the seven-day window. The collector queries Display/vendor/WHEA events, relevant Windows Error Reporting and desktop crashes, and graphics device configuration events. Queries retain up to 200 candidate events per channel and disclose truncation or access failures. Driver dates are package metadata, not installation timestamps. The symptom questions help distinguish app, driver, and external display paths; they do not diagnose an Intel CPU/iGPU fault from its presence alone.
+
+The vendor update button opens Intel's browser-based Driver & Support Assistant, or a signature-verified installed NVIDIA App / AMD Software. If a supported installed tool is not found, it opens the official vendor page. Installation and any restart happen through the vendor's interface; the app does not claim that opening a tool installs a driver. PC manufacturer support links are also available. Before launching, the app saves adapter versions to `%APPDATA%/windows-system-repair-helper/graphics-baseline.json`; later scans compare this baseline even after a restart. Version changes are evidence of a changed driver, not proof that flicker has stopped. The restart indication checks Windows servicing/update restart flags and is not a complete GPU installer status.
+
+**Save graphics diagnostic report** exports the scan, raw evidence, collection limits, version changes, and symptom answers as JSON. Reports stay local; they can contain hardware identifiers, machine model, paths, and event details.
+
+## Release automation
+
+Pushes to `main` run `.github/workflows/release.yml` on Windows. The workflow runs frontend/backend tests, a PowerShell collector fixture, builds with Go 1.27.1 and Wails 2.14.0, verifies license notices, and publishes a new versioned GitHub release containing `WindowsSystemRepairHelper.exe` and a ZIP with license files. Bump `appVersion`, Windows version resources, and `RELEASE_NOTES.md` for each release. Existing releases are not overwritten. The current release version is `2026.10.05`.

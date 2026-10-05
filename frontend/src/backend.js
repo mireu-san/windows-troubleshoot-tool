@@ -134,3 +134,8 @@ export function OpenRecoveryHelp() {
   window.open('https://support.microsoft.com/en-us/windows/experience/startup-boot/startup-repair', '_blank', 'noopener,noreferrer');
   return Promise.resolve();
 }
+
+export function ExportRepairDiagnostics() {
+  if (inWails()) return window.go.main.App.ExportRepairDiagnostics();
+  return Promise.reject(new Error('실패 로그 저장은 Windows 데스크톱 앱에서 사용할 수 있습니다.'));
+}

@@ -226,3 +226,21 @@ html[lang="ja"] { font-family: 'Yu Gothic UI', 'Meiryo', 'Segoe UI', sans-serif;
   .header-actions { width: 100%; justify-content: flex-end; }
   .guidance-top .language-picker { margin-left: 0; }
 }
+
+.debug-panel { margin-top: 20px; padding: 16px; border: 1px solid #dbe4f0; border-radius: 12px; background: #f3f6fb; }
+.debug-panel h3 { margin: 0; font-size: 14px; }
+.debug-panel p { color: #52657d; font-size: 12px; line-height: 1.7; overflow-wrap: anywhere; }
+
+.graphics-panel { margin: 16px 0; padding: 24px 28px; border: 1px solid #e0e7f0; border-radius: 18px; background: #fff; }
+.graphics-panel h2 { font-size: 18px; margin-top: 0; }
+.graphics-panel h3 { font-size: 14px; }
+.graphics-panel p { font-size: 12px; line-height: 1.7; color: #52657d; white-space: pre-line; overflow-wrap: anywhere; }
+.graphics-panel .button-row { flex-wrap: wrap; }
+.graphics-panel .secondary { margin: 4px; }
+.graphics-device, .graphics-finding { border-left: 3px solid #a7c8ef; padding: 8px 12px; margin: 12px 0; background: #f3f6fb; }
+.graphics-panel details { margin-top: 16px; font-size: 13px; }
+.graphics-panel summary { cursor: pointer; }
+.graphics-panel pre { max-height: 240px; overflow: auto; padding: 12px; background: #142236; color: #cfe3ff; white-space: pre-wrap; overflow-wrap: anywhere; }
+.graphics-questions label { display: grid; gap: 8px; margin: 14px 0; }
+.graphics-questions select { padding: 8px; font: inherit; max-width: 100%; }
+.graphics-status { min-height: 1.7em; }
