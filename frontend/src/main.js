@@ -149,10 +149,10 @@ app.innerHTML = `
   <dialog class="tool-overview developer-info" id="developerInfo" aria-labelledby="developerTitle">
     <form method="dialog">
       <h2 id="developerTitle">개발자 정보</h2>
-      <p><strong>Ayin Kim</strong></p>
+      <p><strong>Jongwan Kim</strong></p>
       <p>연락처: <a href="mailto:starmireu@gmail.com" id="developerEmail">starmireu@gmail.com</a></p>
       <p class="developer-purpose">Windows 내장 복구 기능을 실행하는 독립 도구입니다. Microsoft가 제작하거나 보증하는 앱이 아닙니다.</p>
-      <p>MIT License · © 2026 Ayin Kim</p>
+      <p>MIT License · © 2026 Jongwan Kim</p>
       <p class="developer-license-note">자체 코드에는 MIT 라이선스가 적용됩니다. 외부 구성 요소에는 각각의 라이선스가 적용됩니다.</p>
       <button type="button" class="settings-button" id="licensesButton">라이선스 및 외부 구성 요소 고지 보기</button>
       <div class="overview-actions"><button class="secondary" autofocus>닫기</button></div>
