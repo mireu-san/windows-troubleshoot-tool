@@ -1,7 +1,7 @@
 {
   "fixed": {
-    "file_version": "2026.10.6.2",
-    "product_version": "2026.10.6.2"
+    "file_version": "2026.10.6.3",
+    "product_version": "2026.10.6.3"
   },
   "info": {
     "0000": {
@@ -9,8 +9,8 @@
       "FileDescription": "DISM 및 시스템 파일 검사기 실행 도우미",
       "CompanyName": "Windows System Repair Helper",
       "LegalCopyright": "Copyright © 2026",
-      "ProductVersion": "2026.10.06.2",
-      "FileVersion": "2026.10.06.2"
+      "ProductVersion": "2026.10.06.3",
+      "FileVersion": "2026.10.06.3"
     }
   }
 }

@@ -244,3 +244,7 @@ html[lang="ja"] { font-family: 'Yu Gothic UI', 'Meiryo', 'Segoe UI', sans-serif;
 .graphics-questions label { display: grid; gap: 8px; margin: 14px 0; }
 .graphics-questions select { padding: 8px; font: inherit; max-width: 100%; }
 .graphics-status { min-height: 1.7em; }
+
+.developer-info .app-update { margin: 16px 0; padding: 12px; }
+.developer-info .app-update p { font-size: 12px; text-align: left; }
+.developer-info .app-update .settings-button { width: auto; margin: 4px 8px 0 0; padding: 8px 12px; }

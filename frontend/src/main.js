@@ -38,14 +38,8 @@ app.innerHTML = `
         <svg viewBox="0 0 24 24"><path d="M4 5.2 10.7 4v7.2H4V5.2Zm7.7-1.4L20 2.6v8.6h-8.3V3.8ZM4 12.2h6.7V20L4 18.8v-6.6Zm7.7 0H20v9.2l-8.3-1.2v-8Z"/></svg>
       </div>
       <div><p class="eyebrow">WINDOWS CARE</p><h1>시스템 복구 도우미 <span class="title-version">(앱 버전 <span id="appVersion">확인 중…</span>)</span></h1></div>
-      <div class="header-actions"><span class="admin-badge"><span class="shield">◆</span> 관리자 권한</span><button class="developer-button" id="developerInfoButton">개발자 정보</button></div>
+      <div class="header-actions"><span class="admin-badge"><span class="shield">◆</span> 관리자 권한</span><button class="developer-button" id="developerInfoButton">앱 정보</button></div>
     </header>
-
-    <section class="app-update" id="appUpdateNotice" aria-label="앱 업데이트">
-      <p id="appUpdateMessage" role="status" aria-live="polite"></p>
-      <button class="settings-button" id="checkAppUpdate">업데이트 확인</button>
-      <button class="settings-button" id="downloadAppUpdate" hidden>업데이트 준비</button>
-    </section>
 
     <section class="hero" id="hero">
       <div class="hero-copy">
@@ -148,7 +142,12 @@ app.innerHTML = `
   </main>
   <dialog class="tool-overview developer-info" id="developerInfo" aria-labelledby="developerTitle">
     <form method="dialog">
-      <h2 id="developerTitle">개발자 정보</h2>
+      <h2 id="developerTitle">앱 정보</h2>
+    <section class="app-update" id="appUpdateNotice" aria-label="앱 업데이트">
+      <p id="appUpdateMessage" role="status" aria-live="polite"></p>
+      <button type="button" class="settings-button" id="checkAppUpdate">업데이트 확인</button>
+      <button type="button" class="settings-button" id="downloadAppUpdate" hidden>업데이트 준비</button>
+    </section>
       <p><strong>Jongwan Kim</strong></p>
       <p>연락처: <a href="mailto:starmireu@gmail.com" id="developerEmail">starmireu@gmail.com</a></p>
       <p class="developer-purpose">Windows 내장 복구 기능을 실행하는 독립 도구입니다. Microsoft가 제작하거나 보증하는 앱이 아닙니다.</p>

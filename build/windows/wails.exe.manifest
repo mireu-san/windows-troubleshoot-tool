@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" manifestVersion="1.0">
-  <assemblyIdentity version="2026.10.6.2" processorArchitecture="*" name="WindowsSystemRepairHelper" type="win32"/>
+  <assemblyIdentity version="2026.10.6.3" processorArchitecture="*" name="WindowsSystemRepairHelper" type="win32"/>
   <description>Windows 시스템 복구 도우미</description>
   <dependency>
     <dependentAssembly>

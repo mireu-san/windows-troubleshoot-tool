@@ -339,9 +339,9 @@
     "en": "Try the same task in the same app again. When seeking help, provide the app name and error message.",
     "ja": "同じアプリで同じ操作をもう一度試してください。相談するときはアプリ名とエラーメッセージを伝えてください。"
   },
-  "개발자 정보": {
-    "en": "About the developer",
-    "ja": "開発者情報"
+  "앱 정보": {
+    "en": "About this app",
+    "ja": "アプリ情報"
   },
   "개인 파일과 설치된 앱은 삭제하지 않습니다.": {
     "en": "Personal files and installed apps are not deleted.",
