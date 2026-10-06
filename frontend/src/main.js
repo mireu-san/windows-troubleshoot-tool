@@ -6,6 +6,8 @@ import projectLicense from '../../LICENSE?raw';
 import thirdPartyNotices from '../../THIRD_PARTY_NOTICES.txt?raw';
 import {
   StartRepair,
+  StartRepairFromMedia,
+  OpenWindowsRepairSettings,
   ExportRepairDiagnostics,
   CancelRepair,
   CancelScheduledShutdown,
@@ -70,6 +72,17 @@ app.innerHTML = `
         <p>실패 당시의 실행 명령, 종료 오류와 해당 시간대의 DISM·CBS 로그를 저장할 수 있습니다. 앱을 닫기 전에 저장하고, 사용자 이름과 경로를 확인한 뒤 공유해 주세요.</p>
         <button class="secondary" id="exportDiagnostics">실패 로그 저장</button>
         <p id="debugStatus" data-i18n-skip></p>
+      </section>
+      <section class="warning-box" id="repairSourcePanel" hidden>
+        <strong>정상 복구 파일이 필요합니다</strong>
+        <p>자동 복구에 필요한 원본을 확보하지 못했거나 원본으로 복구하지 못했습니다. 원본이 없다면 Windows의 현재 버전 재설치 복구를 진행하세요. 아래 버튼은 복구 설정을 열며, 설치는 Windows 화면에서 직접 시작해야 합니다.</p>
+        <button class="secondary" id="openRepairSettings">Windows 복구 재설치 열기</button>
+        <p>설치 원본이 없다면 Windows 복구 화면에서 ‘Windows 업데이트를 사용하여 문제 해결’의 ‘지금 다시 설치’를 선택하세요. 앱·파일·설정을 유지하며, Windows 화면에서 시작해야 합니다. 이 옵션이 없는 PC도 있습니다.</p>
+        <p>재설치 옵션이 없다면 Microsoft 설치 미디어를 통한 복구 설치를 검토하세요. 설치 프로그램에서 개인 파일 및 앱 유지가 가능한지 먼저 확인하세요.</p>
+        <p>설치 미디어가 있다면 ISO를 탑재한 뒤 sources 폴더의 install.wim 또는 install.esd를 선택할 수 있습니다. 버전 검사를 통과해도 필요한 파일이 없으면 실패할 수 있습니다. 재설치 후 이 앱에서 검사 및 복구를 다시 실행해 결과를 확인하세요.</p>
+        <button class="secondary" id="repairFromMedia">설치 원본으로 복구 계속</button>
+        <details id="sourceDetailsPanel" hidden><summary>원본 검사 결과</summary><pre id="sourceDetails" data-i18n-skip></pre></details>
+        <p id="repairSourceStatus" role="status"></p>
       </section>
       <details class="details"><summary>자세한 진행 내용 보기</summary><p class="hint">명령 출력은 Windows에서 제공한 원문입니다.</p><pre id="output" aria-live="polite"></pre></details>
     </section>
@@ -375,7 +388,37 @@ exportDiagnostics.addEventListener('click', async () => {
   } finally { exportDiagnostics.disabled = false; }
 });
 
+const repairSourcePanel = document.querySelector('#repairSourcePanel');
+const repairFromMedia = document.querySelector('#repairFromMedia');
+const openRepairSettings = document.querySelector('#openRepairSettings');
+const repairSourceStatus = document.querySelector('#repairSourceStatus');
+repairFromMedia.addEventListener('click', async () => {
+  repairFromMedia.disabled = true;
+  openRepairSettings.disabled = true;
+  try {
+    // Backend events own progress; do not overwrite an event arriving before the RPC returns.
+    const started = await StartRepairFromMedia();
+    if (started) shutdownAfterRepair.checked = false;
+  } catch (error) { repairSourceStatus.textContent = t(String(error)); }
+  finally { repairFromMedia.disabled = false; openRepairSettings.disabled = false; }
+});
+openRepairSettings.addEventListener('click', async () => {
+  try { await OpenWindowsRepairSettings(); repairSourceStatus.textContent = t('복구 설정을 열었습니다. Windows에서 재설치를 시작하고, 완료 후 이 앱에서 다시 검사하세요. 아직 복구 성공이 확인된 상태는 아닙니다.'); }
+  catch (error) { repairSourceStatus.textContent = t(String(error)); }
+});
+
 function setState(event) {
+  repairSourcePanel.hidden = !event.sourceRequired;
+  document.querySelector('#sourceDetailsPanel').hidden = !event.sourceDetails;
+  document.querySelector('#sourceDetails').textContent = event.sourceDetails || '';
+  if (event.stage === 'starting' || event.stage === 'source' || event.stage === 'error') repairSourceStatus.textContent = '';
+  if (event.stage === 'source' || event.stage === 'dism' || event.stage === 'sfc') {
+    els.start.disabled = true;
+    cancelRepairButton.hidden = false;
+    cancelRepairButton.disabled = false;
+    cancelRepairButton.textContent = '검사 및 복구 취소';
+  }
+
   if (event.stage === 'starting') {
     debugPanel.hidden = true;
     document.querySelector('#debugStatus').textContent = '';

@@ -192,3 +192,20 @@ The vendor update button opens Intel's browser-based Driver & Support Assistant,
 ## Release automation
 
 Pushes to `main` run `.github/workflows/release.yml` on Windows. The workflow runs frontend/backend tests, a PowerShell collector fixture, builds with Go 1.27.1 and Wails 2.14.0, verifies license notices, and publishes a new versioned GitHub release containing `WindowsSystemRepairHelper.exe` and a ZIP with license files. Bump `appVersion`, Windows version resources, and `RELEASE_NOTES.md` for each release. Existing releases are not overwritten. The current release version is `2026.10.05`.
+
+### 복구 원본 부족 오류 자동 대응
+
+`DISM /Online /Cleanup-Image /RestoreHealth`가 `0x800f0915` 또는 `0x800f081f`로 실패하면 연결된 드라이브의 `sources/install.wim`·`install.esd`를 자동 검색합니다. Windows 빌드, 에디션, 아키텍처, 설치된 UI 언어가 일치하고 업데이트 리비전이 같거나 높은 이미지의 인덱스를 선택해 `/Source`를 지정한 복구를 한 번 재시도합니다. Windows Update도 보조 원본으로 계속 사용하며, DISM이 성공한 경우에만 SFC로 진행합니다.
+
+자동 복구가 불가능하면 실패 화면의 **설치 원본으로 복구 계속**에서 WIM/ESD 파일을 선택할 수 있습니다. Microsoft 설치 ISO는 Windows에서 먼저 탑재하고 `sources` 폴더의 파일을 선택합니다. 원본 선택 재시도에서는 자동 종료를 예약하지 않습니다. 원본 파일 경로는 명령 셸을 거치지 않고 DISM에 전달합니다.
+
+호환 원본이 없다면 **Windows 복구 재설치 열기**로 복구 설정에 진입할 수 있습니다. Windows의 **Windows 업데이트를 사용하여 문제 해결 → 지금 다시 설치**는 사용자가 Windows 화면에서 시작해야 하며, 지원되지 않거나 관리 정책에 의해 제공되지 않는 PC도 있습니다. 앱이 설정을 여는 것을 복구 완료로 처리하지 않습니다.
+
+이 기능은 ISO 자동 다운로드·탑재 또는 무인 Windows 재설치를 수행하지 않습니다. 서로 다른 빌드 간 enablement package 관계를 추정하지 않으므로, 해당 관계로 호환될 수 있는 미디어도 자동 선택에서 제외합니다. 호환 이미지라도 필요한 파일이 빠져 있으면 복구가 실패할 수 있습니다. 특히 Insider 빌드에 일반 배포 ISO를 무조건 적용하지 않습니다.
+
+근거: [Microsoft 복구 원본 구성](https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/configure-a-windows-repair-source?view=windows-11), [Windows 복구 재설치](https://support.microsoft.com/en-US/Windows/Deployment/Install-Upgrade/fix-issues-by-reinstalling-the-current-version-of-windows).
+
+
+원본 자동 검색에서 후보가 제외되면 **원본 검사 결과**에 대상 Windows와 후보 이미지 버전, 빌드·에디션·아키텍처·언어·업데이트 수준의 제외 사유 또는 조회 오류를 표시합니다. 자동 검색 실패의 상세 내용은 실패 로그에도 포함됩니다. 이 검사는 보수적인 후보 필터이며, 통과한 이미지에 실제 필요한 모든 복구 파일이 있다는 보장은 아닙니다. 다른 빌드의 stable ISO를 자동 대체 원본으로 사용하지 않습니다.
+
+원본을 확보하지 못하거나 DISM 원본 복구가 실패하면 **Windows 복구 재설치 열기**에서 다음 복구 방법을 안내합니다. 이 버튼은 설정만 열며 재설치를 실행하거나 복구 성공으로 처리하지 않습니다. Windows의 ‘Windows 업데이트를 사용하여 문제 해결’에서 직접 시작해야 하며, 관리 정책이나 Windows 버전에 따라 해당 옵션이 없을 수 있습니다. 옵션이 없으면 Microsoft 설치 미디어를 통한 복구 설치를 검토하고, 개인 파일 및 앱 유지 가능 여부를 설치 프로그램에서 확인합니다. 재설치와 재시작 후 앱을 다시 열어 검사 및 복구를 실행해 결과를 확인하세요.

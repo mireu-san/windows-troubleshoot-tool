@@ -139,3 +139,12 @@ export function ExportRepairDiagnostics() {
   if (inWails()) return window.go.main.App.ExportRepairDiagnostics();
   return Promise.reject(new Error('실패 로그 저장은 Windows 데스크톱 앱에서 사용할 수 있습니다.'));
 }
+
+export function StartRepairFromMedia() {
+  if (inWails()) return window.go.main.App.StartRepairFromMedia();
+  return Promise.reject(new Error('Windows 데스크톱 앱에서 설치 원본을 선택해 주세요.'));
+}
+export function OpenWindowsRepairSettings() {
+  if (inWails()) return window.go.main.App.OpenWindowsRepairSettings();
+  window.open('ms-settings:recovery');
+}

@@ -14,6 +14,8 @@ const microsoftHelpURL = "https://support.microsoft.com/ko-kr/windows/experience
 
 type RepairEvent struct {
 	Stage             string `json:"stage"`
+	SourceDetails     string `json:"sourceDetails,omitempty"`
+	SourceRequired    bool   `json:"sourceRequired,omitempty"`
 	DebugAvailable    bool   `json:"debugAvailable,omitempty"`
 	Title             string `json:"title"`
 	Message           string `json:"message"`
@@ -58,6 +60,7 @@ type App struct {
 	shutdownAfterRepair bool
 	shutdownPending     bool
 	shutdownCommand     func(bool) error
+	findRepairSource    func(context.Context, string) (string, error)
 }
 
 func NewApp() *App {
@@ -184,7 +187,9 @@ func (a *App) StartDefenderQuickScan() error {
 
 func (a *App) OpenDefenderSecurity() error { return openDefenderSecurity() }
 
-func (a *App) runRepair(ctx context.Context) {
+func (a *App) runRepair(ctx context.Context) { a.runRepairWithSource(ctx, "") }
+
+func (a *App) runRepairWithSource(ctx context.Context, selected string) {
 	defer func() {
 		a.mu.Lock()
 		if a.repairCancel != nil {
@@ -219,6 +224,25 @@ func (a *App) runRepair(ctx context.Context) {
 	}
 
 	started := time.Now()
+	var source string
+	var sourceDetails string
+	if selected != "" {
+		a.emit(RepairEvent{Stage: "source", Title: "복구 원본 확인 중", Message: "설치 파일의 버전, 에디션, 언어와 아키텍처를 확인합니다."})
+		var err error
+		source, err = a.resolveRepairSource(ctx, selected)
+		if cancelled() {
+			return
+		}
+		if err != nil || source == "" {
+			message := "현재 Windows와 호환되는 복구 원본을 찾지 못했습니다."
+			if err != nil {
+				sourceDetails = err.Error()
+			}
+			a.emit(RepairEvent{Stage: "error", Title: "복구 원본을 사용할 수 없습니다", Message: message, SourceRequired: true, SourceDetails: sourceDetails})
+			return
+		}
+		steps[0] = withRepairSource(steps[0], source)
+	}
 	var console diagnosticTail
 	for _, step := range steps {
 		if cancelled() {
@@ -233,10 +257,36 @@ func (a *App) runRepair(ctx context.Context) {
 		if cancelled() {
 			return
 		}
+		if err != nil && isRepairSourceMissing(step, err) && source == "" {
+			fmt.Fprintf(&console, "Initial failure: %v\n", err)
+			a.emit(RepairEvent{Stage: "source", Title: "복구 원본 자동 검색 중", Message: "연결된 설치 미디어에서 호환되는 정상 파일을 찾고 있습니다."})
+			found, searchErr := a.resolveRepairSource(ctx, "")
+			if cancelled() {
+				return
+			}
+			if searchErr != nil {
+				sourceDetails = searchErr.Error()
+				fmt.Fprintf(&console, "Source search: %v\n", searchErr)
+			}
+			if found != "" && searchErr == nil {
+				step = withRepairSource(step, found)
+				fmt.Fprintf(&console, "\nCommand: %s %v\n", step.Name, step.Args)
+				a.emit(RepairEvent{Stage: "dism", Title: step.Title, Message: step.StartText, Progress: step.ProgressMin})
+				err = a.runner.Run(ctx, step, func(line string, progress int) {
+					fmt.Fprintln(&console, line)
+					a.emit(RepairEvent{Stage: step.Stage, Title: step.Title, Message: step.StartText, Output: line, Progress: progress})
+				})
+				if cancelled() {
+					return
+				}
+			}
+		}
 		if err != nil {
 			a.captureRepairFailure(started, step, err, console.String())
 			a.emit(RepairEvent{
 				DebugAvailable: true,
+				SourceRequired: isRepairSourceMissing(step, err),
+				SourceDetails:  sourceDetails,
 				Stage:          "error", Title: "복구를 완료하지 못했습니다",
 				Message: friendlyError(step, err), Output: err.Error(), Progress: step.ProgressMin,
 			})
@@ -303,6 +353,9 @@ func (a *App) emitUpdate(event RepairEvent) {
 func friendlyError(step CommandSpec, err error) string {
 	if errors.Is(err, errUnsupportedPlatform) {
 		return "이 앱은 Windows 10 및 Windows 11에서만 실행할 수 있습니다."
+	}
+	if isRepairSourceMissing(step, err) {
+		return "Windows Update에서 필요한 복구 파일을 확보하지 못했습니다. 설치 원본을 선택해 앱에서 복구를 계속하거나 Windows 복구 재설치를 진행해 주세요."
 	}
 	return fmt.Sprintf("%s 단계에서 오류가 발생했습니다. 앱을 관리자 권한으로 실행했는지와 인터넷 연결을 확인한 뒤 다시 시도해 주세요.", step.Title)
 }

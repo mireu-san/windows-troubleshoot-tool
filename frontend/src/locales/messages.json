@@ -1774,5 +1774,97 @@
   "PC 제조사 지원 페이지에서 해당 모델의 그래픽 드라이버를 확인해 주세요.": {
     "en": "Check your model's graphics drivers on the PC manufacturer's support page.",
     "ja": "PCメーカーのサポートページで、該当モデルのグラフィックスドライバーを確認してください。"
+  },
+  "복구 원본 확인 중": {
+    "en": "Checking repair source",
+    "ja": "修復ソースを確認中"
+  },
+  "설치 파일의 버전, 에디션, 언어와 아키텍처를 확인합니다.": {
+    "en": "Checking the installation image version, edition, languages and architecture.",
+    "ja": "インストールイメージのバージョン、エディション、言語、アーキテクチャを確認しています。"
+  },
+  "현재 Windows와 호환되는 복구 원본을 찾지 못했습니다.": {
+    "en": "No compatible repair source was found for this Windows installation.",
+    "ja": "現在の Windows と互換性のある修復ソースが見つかりませんでした。"
+  },
+  "복구 원본을 사용할 수 없습니다": {
+    "en": "Repair source unavailable",
+    "ja": "修復ソースを使用できません"
+  },
+  "복구 원본 자동 검색 중": {
+    "en": "Searching for a repair source",
+    "ja": "修復ソースを自動検索中"
+  },
+  "연결된 설치 미디어에서 호환되는 정상 파일을 찾고 있습니다.": {
+    "en": "Looking for compatible files on connected installation media.",
+    "ja": "接続されたインストールメディアで互換性のある正常なファイルを探しています。"
+  },
+  "Windows Update에서 필요한 복구 파일을 확보하지 못했습니다. 설치 원본을 선택해 앱에서 복구를 계속하거나 Windows 복구 재설치를 진행해 주세요.": {
+    "en": "Windows Update could not supply the required repair files. Select an installation image to continue repair in this app, or use Windows repair reinstallation.",
+    "ja": "Windows Update から必要な修復ファイルを取得できませんでした。インストールイメージを選択してこのアプリで修復を続けるか、Windows の修復再インストールを行ってください。"
+  },
+  "설치 원본과 Windows Update를 사용해 구성 요소 복구를 다시 시도합니다.": {
+    "en": "Retrying component repair using the installation image and Windows Update.",
+    "ja": "インストールイメージと Windows Update を使用してコンポーネントの修復を再試行しています。"
+  },
+  "Windows 설치 원본 선택": {
+    "en": "Select a Windows installation image",
+    "ja": "Windows インストールイメージを選択"
+  },
+  "현재 Windows 버전 정보를 확인할 수 없습니다.": {
+    "en": "Could not determine the installed Windows version.",
+    "ja": "現在の Windows のバージョン情報を確認できません。"
+  },
+  "복구 원본 조회 실패: %w": {
+    "en": "Repair source lookup failed: %w",
+    "ja": "修復ソースの確認に失敗しました: %w"
+  },
+  "복구 원본 조회 실패: %s": {
+    "en": "Repair source lookup failed: %s",
+    "ja": "修復ソースの確認に失敗しました: %s"
+  },
+  "Windows 데스크톱 앱에서 설치 원본을 선택해 주세요.": {
+    "en": "Select an installation image in the Windows desktop app.",
+    "ja": "Windows デスクトップアプリでインストールイメージを選択してください。"
+  },
+  "정상 복구 파일이 필요합니다": {
+    "en": "Repair files are required",
+    "ja": "正常な修復ファイルが必要です"
+  },
+  "연결된 설치 미디어로 복구하지 못했습니다. Microsoft 설치 ISO를 Windows에서 탑재한 뒤 sources 폴더의 install.wim 또는 install.esd를 선택해 주세요. 현재 Windows의 빌드·에디션·언어·아키텍처가 일치하고 업데이트 수준이 같거나 높은 원본이 필요합니다.": {
+    "en": "Repair using connected installation media was unsuccessful. Mount a Microsoft installation ISO in Windows, then select install.wim or install.esd in its sources folder. The image must match the installed Windows build, edition, languages and architecture, with the same or a newer update revision.",
+    "ja": "接続されたインストールメディアでは修復できませんでした。Microsoft のインストール ISO を Windows でマウントし、sources フォルダー内の install.wim または install.esd を選択してください。現在の Windows とビルド、エディション、言語、アーキテクチャが一致し、更新レベルが同じか新しいイメージが必要です。"
+  },
+  "설치 원본으로 복구 계속": {
+    "en": "Continue repair using installation media",
+    "ja": "インストールイメージで修復を続ける"
+  },
+  "Windows 복구 재설치 열기": {
+    "en": "Open Windows repair reinstallation",
+    "ja": "Windows の修復再インストールを開く"
+  },
+  "설치 원본이 없다면 Windows 복구 화면에서 ‘Windows 업데이트를 사용하여 문제 해결’의 ‘지금 다시 설치’를 선택하세요. 앱·파일·설정을 유지하며, Windows 화면에서 시작해야 합니다. 이 옵션이 없는 PC도 있습니다.": {
+    "en": "Without installation media, open Windows Recovery and choose Reinstall now under Fix problems using Windows Update. This keeps apps, files and settings. You must start it in Windows Settings; the option may be unavailable on some PCs.",
+    "ja": "インストールイメージがない場合は、Windows の回復画面で「Windows Update で問題を解決する」の「今すぐ再インストール」を選択してください。アプリ、ファイル、設定は保持されます。Windows の設定画面で開始する必要があります。このオプションがない PC もあります。"
+  },
+  "자동 복구에 필요한 원본을 확보하지 못했거나 원본으로 복구하지 못했습니다. 원본이 없다면 Windows의 현재 버전 재설치 복구를 진행하세요. 아래 버튼은 복구 설정을 열며, 설치는 Windows 화면에서 직접 시작해야 합니다.": {
+    "en": "Automatic repair could not obtain the required source or repair using it. If you have no source, use Windows to reinstall the current version. The button opens Recovery settings; start installation in Windows.",
+    "ja": "自動修復に必要なソースを確保できないか、ソースで修復できませんでした。ソースがない場合はWindowsで現在のバージョンを再インストールしてください。ボタンは回復設定を開きます。インストールはWindowsで開始してください。"
+  },
+  "설치 미디어가 있다면 ISO를 탑재한 뒤 sources 폴더의 install.wim 또는 install.esd를 선택할 수 있습니다. 버전 검사를 통과해도 필요한 파일이 없으면 실패할 수 있습니다. 재설치 후 이 앱에서 검사 및 복구를 다시 실행해 결과를 확인하세요.": {
+    "en": "If you have installation media, mount the ISO and select sources/install.wim or install.esd. Passing version checks does not guarantee that the required files exist. After reinstalling, run scan and repair in this app again to verify the result.",
+    "ja": "インストールメディアがある場合はISOをマウントし、sources内のinstall.wimまたはinstall.esdを選択できます。バージョン確認を通過しても必要なファイルがなければ失敗します。再インストール後、このアプリで検査と修復を再実行してください。"
+  },
+  "재설치 옵션이 없다면 Microsoft 설치 미디어를 통한 복구 설치를 검토하세요. 설치 프로그램에서 개인 파일 및 앱 유지가 가능한지 먼저 확인하세요.": {
+    "en": "If the reinstall option is unavailable, consider a repair installation using Microsoft installation media. First check that Setup allows you to keep personal files and apps.",
+    "ja": "再インストールの項目がない場合は、Microsoftのインストールメディアによる修復インストールを検討してください。セットアップで個人用ファイルとアプリを引き継げることを先に確認してください。"
+  },
+  "복구 설정을 열었습니다. Windows에서 재설치를 시작하고, 완료 후 이 앱에서 다시 검사하세요. 아직 복구 성공이 확인된 상태는 아닙니다.": {
+    "en": "Recovery settings opened. Start reinstallation in Windows, then run this app again to check the result. Repair success has not yet been verified.",
+    "ja": "回復設定を開きました。Windowsで再インストールを開始し、完了後にこのアプリで再検査してください。修復の成功はまだ確認されていません。"
+  },
+  "원본 검사 결과": {
+    "en": "Source inspection results",
+    "ja": "ソースの検査結果"
   }
 }

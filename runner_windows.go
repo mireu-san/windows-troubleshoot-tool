@@ -25,6 +25,13 @@ func (r *systemRunner) Run(ctx context.Context, spec CommandSpec, onOutput func(
 	// chcp 65001 makes localized command output safe to send to the UTF-8 web UI.
 	commandLine := quoteWindowsCommand(spec.Name, spec.Args)
 	cmd := exec.CommandContext(ctx, "cmd.exe", "/D", "/S", "/C", "chcp 65001>nul & "+commandLine)
+	// Source paths must never pass through cmd.exe. These retries request /English.
+	for _, arg := range spec.Args {
+		if strings.HasPrefix(arg, "/Source:") {
+			cmd = exec.CommandContext(ctx, spec.Name, spec.Args...)
+			break
+		}
+	}
 	cmd.SysProcAttr = &syscall.SysProcAttr{HideWindow: true}
 	// cmd.exe owns the DISM/SFC child; cancel the process tree, not just the shell.
 	cmd.Cancel = func() error {

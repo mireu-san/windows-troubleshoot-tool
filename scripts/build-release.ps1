@@ -13,6 +13,8 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Backend tests failed.' }
     & "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -File (Join-Path $PSScriptRoot 'test-graphics.ps1')
     if ($LASTEXITCODE -ne 0) { throw 'Windows PowerShell collector tests failed.' }
+    & "$env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe" -NoLogo -NoProfile -NonInteractive -File (Join-Path $PSScriptRoot 'test-repair-source.ps1')
+    if ($LASTEXITCODE -ne 0) { throw 'Repair source scanner tests failed.' }
     python scripts/generate_notices.py
     if ($LASTEXITCODE -ne 0) { throw 'Notice generation failed.' }
     wails build -clean -platform windows/amd64 -webview2 browser
