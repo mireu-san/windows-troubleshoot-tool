@@ -41,8 +41,9 @@ app.innerHTML = `
       <div class="header-actions"><span class="admin-badge"><span class="shield">◆</span> 관리자 권한</span><button class="developer-button" id="developerInfoButton">개발자 정보</button></div>
     </header>
 
-    <section class="app-update" id="appUpdateNotice" aria-label="앱 업데이트" hidden>
+    <section class="app-update" id="appUpdateNotice" aria-label="앱 업데이트">
       <p id="appUpdateMessage" role="status" aria-live="polite"></p>
+      <button class="settings-button" id="checkAppUpdate">업데이트 확인</button>
       <button class="settings-button" id="downloadAppUpdate" hidden>업데이트 준비</button>
     </section>
 
@@ -273,6 +274,8 @@ document.querySelector('#defenderSecurityButton').addEventListener('click', asyn
   catch (error) { defenderStatus.hidden = false; defenderStatus.textContent = String(error); }
 });
 const downloadAppUpdateButton = document.querySelector('#downloadAppUpdate');
+const checkAppUpdateButton = document.querySelector('#checkAppUpdate');
+let appUpdateBusy = false;
 GetAppVersion().then(version => {
   document.querySelector('#appVersion').textContent = version;
 }).catch(() => { document.querySelector('#appVersion').textContent = '확인 불가'; });
@@ -288,6 +291,8 @@ async function offerUpdateInstallation() {
 }
 
 async function prepareAppUpdate() {
+  appUpdateBusy = true;
+  checkAppUpdateButton.disabled = true;
   downloadAppUpdateButton.hidden = false;
   downloadAppUpdateButton.disabled = true;
   downloadAppUpdateButton.textContent = '다운로드 중…';
@@ -304,21 +309,29 @@ async function prepareAppUpdate() {
     downloadAppUpdateButton.textContent = '다운로드 다시 시도';
   } finally {
     downloadAppUpdateButton.disabled = false;
+    appUpdateBusy = false;
+    checkAppUpdateButton.disabled = appUpdateReady;
   }
 }
 
 async function checkForUpdatesOnStartup() {
+  if (appUpdateBusy || appUpdateReady) return;
+  appUpdateBusy = true;
+  checkAppUpdateButton.disabled = true;
+  downloadAppUpdateButton.hidden = true;
+  appUpdateMessage.textContent = t('앱 업데이트를 확인하고 있습니다…');
   try {
     const info = await CheckAppUpdate();
-    if (info.available) {
-      document.querySelector('#appUpdateNotice').hidden = false;
-      appUpdateMessage.textContent = info.message;
-      if (info.canDownload) await prepareAppUpdate();
-    }
-  } catch {
-    document.querySelector('#appVersion').title = '이번 실행에서는 업데이트를 확인하지 못했습니다. 다음 실행 시 다시 확인합니다.';
+    appUpdateMessage.textContent = t(info.message || '현재 최신 버전을 사용하고 있습니다.');
+    if (info.available && info.canDownload) await prepareAppUpdate();
+  } catch (error) {
+    appUpdateMessage.textContent = t('업데이트 확인에 실패했습니다. 업데이트 확인 버튼으로 다시 시도하세요.') + ' ' + t(String(error));
+  } finally {
+    appUpdateBusy = false;
+    checkAppUpdateButton.disabled = appUpdateReady;
   }
 }
+checkAppUpdateButton.addEventListener('click', checkForUpdatesOnStartup);
 checkForUpdatesOnStartup();
 
 downloadAppUpdateButton.addEventListener('click', async () => {

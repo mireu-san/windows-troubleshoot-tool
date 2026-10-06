@@ -1866,5 +1866,17 @@
   "원본 검사 결과": {
     "en": "Source inspection results",
     "ja": "ソースの検査結果"
+  },
+  "업데이트 확인": {
+    "en": "Check for updates",
+    "ja": "更新を確認"
+  },
+  "앱 업데이트를 확인하고 있습니다…": {
+    "en": "Checking for app updates…",
+    "ja": "アプリの更新を確認しています…"
+  },
+  "업데이트 확인에 실패했습니다. 업데이트 확인 버튼으로 다시 시도하세요.": {
+    "en": "Could not check for updates. Use Check for updates to try again.",
+    "ja": "更新を確認できませんでした。「更新を確認」ボタンから再試行してください。"
   }
 }
