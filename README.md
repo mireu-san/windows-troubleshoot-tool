@@ -97,14 +97,14 @@ Choosing **Install** closes the app, replaces the executable, and restarts it. C
 
 The app does not install an update if downloading fails or the verification digest is missing or does not match. Automatic updates require an executable attached to a GitHub Release.
 
-The current default version is `2026.10.05`. Specify the version when building a release on Windows:
+The current default version is `2026.10.08`. Specify the version when building a release on Windows:
 
 ```powershell
-wails build -clean -platform windows/amd64 -webview2 browser -ldflags "-X main.appVersion=2026.10.05"
+wails build -clean -platform windows/amd64 -webview2 browser -ldflags "-X main.appVersion=2026.10.08"
 ```
 
 1. Commit the changes and push them to GitHub.
-2. Create a stable release with a tag such as `v2026.10.05`. The tag must match the version embedded in the build. Supported formats are `vYYYY.MM.DD` and `vYYYY.MM.DD.N`; increment the last number for additional releases on the same day. See the compatibility notes below before adopting a four-part tag.
+2. Create a stable release with a tag such as `v2026.10.08`. The tag must match the version embedded in the build. Supported formats are `vYYYY.MM.DD` and `vYYYY.MM.DD.N`; increment the last number for additional releases on the same day. See the compatibility notes below before adopting a four-part tag.
 3. Prepare the compatibility executable and ZIP described under **Distribution Filenames**, then attach both to the release. Automatic updates select `WindowsSystemRepairHelper.exe` first. If distributing only an installer, name it `WindowsSystemRepairHelper-amd64-installer.exe`. These naming rules apply to Windows x64 builds.
 4. Publish the release as the latest stable release, with the prerelease option disabled.
 5. Launch an older app version and verify that it checks for updates, downloads the new executable, and displays the installation prompt.
@@ -136,19 +136,19 @@ While the app tracks a pending shutdown, it blocks new scans, repairs, and app u
 
 ### Version Comparison and Release Compatibility
 
-This release uses `v2026.10.05`, which the older `2026.09.12` app can recognize. The current app compares three-part and four-part versions numerically, treating an omitted fourth part as zero. Version comparison does not use the computer's date or time. The older `2026.09.12` app recognizes only three-part versions, so it cannot directly update to a four-part release tag.
+This release uses `v2026.10.08`, which the older `2026.09.12` app can recognize. The current app compares three-part and four-part versions numerically, treating an omitted fourth part as zero. Version comparison does not use the computer's date or time. The older `2026.09.12` app recognizes only three-part versions, so it cannot directly update to a four-part release tag.
 
 Build this version with:
 
 ```powershell
-wails build -clean -platform windows/amd64 -webview2 browser -ldflags "-X main.appVersion=2026.10.05"
+wails build -clean -platform windows/amd64 -webview2 browser -ldflags "-X main.appVersion=2026.10.08"
 ```
 
-Use `v2026.10.05` as the stable release tag and attach the compatibility executable named `WindowsSystemRepairHelper.exe`.
+Use `v2026.10.08` as the stable release tag and attach the compatibility executable named `WindowsSystemRepairHelper.exe`.
 
 ## Distribution Filenames
 
-Builds use the executable name configured in `wails.json`. Preserve that filename inside a ZIP for manual downloads because GitHub may normalize non-ASCII release attachment names. For example, name the ZIP `windows-system-repair-helper-2026.10.05.zip`.
+Builds use the executable name configured in `wails.json`. Preserve that filename inside a ZIP for manual downloads because GitHub may normalize non-ASCII release attachment names. For example, name the ZIP `windows-system-repair-helper-2026.10.08.zip`.
 
 For compatibility with automatic updates in existing apps, copy the same executable to `WindowsSystemRepairHelper.exe` and attach it alongside the ZIP. The executable inside the ZIP and the compatibility executable must contain identical bytes. Automatic updates preserve the existing executable path, so they do not rename files already installed on a user's computer.
 
@@ -156,7 +156,7 @@ For compatibility with automatic updates in existing apps, copy the same executa
 $buildConfig = Get-Content 'wails.json' -Raw | ConvertFrom-Json
 $executablePath = Join-Path 'build/bin' ($buildConfig.outputfilename + '.exe')
 Copy-Item -LiteralPath $executablePath -Destination 'build/bin/WindowsSystemRepairHelper.exe'
-Compress-Archive -LiteralPath $executablePath -DestinationPath 'build/bin/windows-system-repair-helper-2026.10.05.zip' -Force
+Compress-Archive -LiteralPath $executablePath -DestinationPath 'build/bin/windows-system-repair-helper-2026.10.08.zip' -Force
 ```
 
 ## Distribution Notices
@@ -191,7 +191,7 @@ The vendor update button opens Intel's browser-based Driver & Support Assistant,
 
 ## Release automation
 
-Pushes to `main` run `.github/workflows/release.yml` on Windows. The workflow runs frontend/backend tests, a PowerShell collector fixture, builds with Go 1.27.1 and Wails 2.14.0, verifies license notices, and publishes a new versioned GitHub release containing `WindowsSystemRepairHelper.exe` and a ZIP with license files. Bump `appVersion`, Windows version resources, and `RELEASE_NOTES.md` for each release. Existing releases are not overwritten. The current release version is `2026.10.05`.
+Pushes to `main` run `.github/workflows/release.yml` on Windows. The workflow runs frontend/backend tests, a PowerShell collector fixture, builds with Go 1.27.1 and Wails 2.14.0, verifies license notices, and publishes a new versioned GitHub release containing `WindowsSystemRepairHelper.exe` and a ZIP with license files. Bump `appVersion`, Windows version resources, and `RELEASE_NOTES.md` for each release. Existing releases are not overwritten. The current release version is `2026.10.08`.
 
 ### 복구 원본 부족 오류 자동 대응
 
@@ -209,3 +209,23 @@ Pushes to `main` run `.github/workflows/release.yml` on Windows. The workflow ru
 원본 자동 검색에서 후보가 제외되면 **원본 검사 결과**에 대상 Windows와 후보 이미지 버전, 빌드·에디션·아키텍처·언어·업데이트 수준의 제외 사유 또는 조회 오류를 표시합니다. 자동 검색 실패의 상세 내용은 실패 로그에도 포함됩니다. 이 검사는 보수적인 후보 필터이며, 통과한 이미지에 실제 필요한 모든 복구 파일이 있다는 보장은 아닙니다. 다른 빌드의 stable ISO를 자동 대체 원본으로 사용하지 않습니다.
 
 원본을 확보하지 못하거나 DISM 원본 복구가 실패하면 **Windows 복구 재설치 열기**에서 다음 복구 방법을 안내합니다. 이 버튼은 설정만 열며 재설치를 실행하거나 복구 성공으로 처리하지 않습니다. Windows의 ‘Windows 업데이트를 사용하여 문제 해결’에서 직접 시작해야 하며, 관리 정책이나 Windows 버전에 따라 해당 옵션이 없을 수 있습니다. 옵션이 없으면 Microsoft 설치 미디어를 통한 복구 설치를 검토하고, 개인 파일 및 앱 유지 가능 여부를 설치 프로그램에서 확인합니다. 재설치와 재시작 후 앱을 다시 열어 검사 및 복구를 실행해 결과를 확인하세요.
+
+### Comprehensive flicker diagnostics and display monitoring
+
+The flicker panel includes **깜박임 원인 종합 진단 / 텍스트 저장**. Enter the recovery time/method, affected left/right screen, simultaneous versus independent flicker, and apps involved. The scan adds CPU/Windows inventory, effective Windows Firewall profiles, connected network categories, Defender and registered antivirus status, known remote-tool processes, startup/task inventory, and bounded driver/update, RDP-session and process-creation logs. Individual collection failures and truncation are disclosed. Security process history requires auditing to have already been enabled and permission to read Security; the app does not enable auditing. Startup/task command lines and process-creation command lines are omitted. Inventory is not a malware verdict, and remote-tool matching is not exhaustive.
+
+**디스플레이 변경 감시 시작** samples attached display paths every second in the backend, including resolution, refresh rate and virtual-desktop position. The initial sample, before/after changes, foreground process name/PID, estimated fullscreen state and symptom markers are retained until restart of monitoring or app exit. Foreground activity is correlation only, not identification of the app responsible for changing a mode. Monitoring stops after 30 minutes, 500 changes, a display query failure, or **감시 종료**. Sub-second transitions can be missed. Monitor coordinates describe the Windows layout, not verified physical placement. HDR/VRR and integrated/discrete classification are explicitly unconfirmed.
+
+Run the comprehensive scan and save, then use **종합 진단 텍스트 다시 저장** after monitoring to include the latest monitoring records. The UTF-8 BOM/CRLF text file contains a readable summary, symptoms, collection limits and indented raw evidence. A cancelled save leaves the scan available to save again. Ordinary graphics scans do not discard the last comprehensive report; its collection time remains visible in the export. Firewall disablement is reported separately from evidence about display symptoms. No settings, processes, firewall rules or security protections are changed. Exported event data can contain usernames, paths and network addresses.
+
+### 읽기 전용 하드웨어 원인 조사
+
+그래픽 패널의 **하드웨어 조사 / 바탕화면 저장**은 CPU, 메인보드, BIOS, RAM, Windows, 그래픽 드라이버, 모니터, 저장장치 건강 정보와 최근 30일의 관련 이벤트를 수집합니다. 선택한 과거 발생 시각 전후 2분은 별도로 조회합니다. 배선과 증상은 사용자 진술로 구분하며 추정 CPU 세대·DDR4 여부를 사실로 기록하지 않습니다.
+
+Windows에 등록된 바탕화면(OneDrive 등으로 이동된 경로 포함)에 `하드웨어진단_YYYY-MM-DD_HH-mm-ss_고유값` 폴더를 만들고 `hardware-diagnostic-report.md`, `hardware-events.csv`, `system-inventory.txt`를 저장합니다. 한국어 보고서에는 9개 가설의 증거·한계·다음 검사, 메인보드 교체 및 CPU/RAM 재사용 판단이 포함됩니다. **결과 폴더 열기**로 확인하고, 저장 실패 시 **수집 결과 다시 저장**으로 메모리에 남은 결과를 저장할 수 있습니다. 새 조사를 시작하면 이전 메모리 스냅샷은 비워집니다.
+
+이 기능은 설정 변경, 드라이버 설치, 복구, 재시작, 부하 검사를 실행하지 않습니다. 방화벽/원격 접속/브라우저/거래 자료와 CCTV 파일은 수집하지 않습니다. 이벤트는 원본 자유문 대신 허용된 진단 필드로 요약하며 장치 일련번호와 전체 경로를 제외합니다. 사용자 증상 입력은 그대로 보고되므로 개인정보를 입력하지 마세요. WER는 지정 폴더의 제한된 `Report.wer` 필드, 덤프는 지정 폴더의 크기와 수정 시각만 조회합니다.
+
+각 이벤트 공급자/기간당 최신 후보 1,000개, WER 폴더당 100개, 덤프 폴더당 100개, 신뢰성 기록 500개까지 수집합니다. 누락·권한 오류·미지원·제한을 보고하며 전체 수집은 최대 3분입니다. 제한 시간 초과로 수집 자체가 실패하면 부분 보고서는 생성되지 않습니다. Windows 이벤트와 WER/신뢰성 기록은 중복될 수 있습니다. 로그 부재는 정상 판정이 아니며 41/WHEA/LiveKernelEvent만으로 특정 부품을 고장 판정하지 않습니다. 실제 배선·PSU·전원부와 부품 정상 여부는 물리적 비교 검사가 필요합니다.
+
+검증: `go test ./...`, `npm --prefix frontend test`, `powershell -NoProfile -File scripts/test-hardware.ps1`. 마지막 명령은 실제 하드웨어 대신 모의 CIM/이벤트를 사용하며 Windows 릴리스 빌드에도 포함됩니다.

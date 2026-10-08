@@ -26,6 +26,11 @@ type GraphicsGPU struct {
 	Status      string  `json:"status"`
 }
 type GraphicsMonitor struct {
+	ID        string `json:"id"`
+	X         int32  `json:"x"`
+	Y         int32  `json:"y"`
+	Primary   bool   `json:"primary"`
+	ModeKnown bool   `json:"modeKnown"`
 	Name      string `json:"name"`
 	Adapter   string `json:"adapter"`
 	AdapterID string `json:"adapterId"`
@@ -49,6 +54,7 @@ type GraphicsFinding struct {
 	Action   string `json:"action"`
 }
 type GraphicsReport struct {
+	Comprehensive  *FlickerDetails    `json:"comprehensive,omitempty"`
 	Collected      string             `json:"collected"`
 	From           string             `json:"from"`
 	Until          string             `json:"until"`
@@ -143,9 +149,9 @@ func analyzeGraphics(report *GraphicsReport) {
 	}
 }
 
-func (a *App) ScanGraphics() (*GraphicsReport, error)        { return a.scanGraphics(false) }
-func (a *App) MarkGraphicsFlicker() (*GraphicsReport, error) { return a.scanGraphics(true) }
-func (a *App) scanGraphics(mark bool) (*GraphicsReport, error) {
+func (a *App) ScanGraphics() (*GraphicsReport, error)        { return a.scanGraphics(false, false) }
+func (a *App) MarkGraphicsFlicker() (*GraphicsReport, error) { return a.scanGraphics(true, false) }
+func (a *App) scanGraphics(mark, comprehensive bool) (*GraphicsReport, error) {
 	if !a.beginOperation() {
 		return nil, errors.New("다른 작업이 진행 중입니다. 완료 후 다시 시도해 주세요.")
 	}
@@ -154,18 +160,21 @@ func (a *App) scanGraphics(mark bool) (*GraphicsReport, error) {
 	a.mu.Lock()
 	if mark {
 		a.graphicsMarker = now
+		if a.displayWatch.Running && len(a.displayWatch.Markers) < 500 {
+			a.displayWatch.Markers = append(a.displayWatch.Markers, now.Format(time.RFC3339Nano))
+		}
 	}
 	marker := a.graphicsMarker
 	a.mu.Unlock()
 	from, until := now.Add(-7*24*time.Hour), now
 	// Re-scans include up to two minutes after a recently marked symptom.
-	if !marker.IsZero() && now.Sub(marker) < 10*time.Minute {
+	if !comprehensive && !marker.IsZero() && now.Sub(marker) < 10*time.Minute {
 		from = marker.Add(-2 * time.Minute)
 		if until.After(marker.Add(2 * time.Minute)) {
 			until = marker.Add(2 * time.Minute)
 		}
 	}
-	ctx, cancel := context.WithTimeout(a.ctx, 60*time.Second)
+	ctx, cancel := context.WithTimeout(a.ctx, 120*time.Second)
 	defer cancel()
 	report, err := scanGraphicsSystem(ctx, from, until)
 	if err != nil {
@@ -177,7 +186,18 @@ func (a *App) scanGraphics(mark bool) (*GraphicsReport, error) {
 	if !marker.IsZero() && now.Sub(marker) < 10*time.Minute {
 		report.Marker = marker.Format(time.RFC3339)
 	}
+	if comprehensive {
+		details, detailErr := collectFlickerDetails(ctx, from, until)
+		if detailErr != nil {
+			report.Issues = append(report.Issues, detailErr.Error())
+		} else {
+			report.Comprehensive = details
+		}
+	}
 	analyzeGraphics(report)
+	if comprehensive {
+		analyzeFlicker(report)
+	}
 	if baseline, err := readGraphicsBaseline(); err == nil {
 		report.BaselineTime = baseline.Time
 		report.Changes = compareGraphicsVersions(baseline.GPUs, report.GPUs)
@@ -186,6 +206,9 @@ func (a *App) scanGraphics(mark bool) (*GraphicsReport, error) {
 	}
 	a.mu.Lock()
 	a.graphicsReport = report
+	if comprehensive {
+		a.flickerReport = report
+	}
 	a.mu.Unlock()
 	return report, nil
 }

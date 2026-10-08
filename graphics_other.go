@@ -15,3 +15,8 @@ func launchGraphicsUpdater(context.Context, string) (bool, error) {
 }
 func openGraphicsSettings() error { return errUnsupportedPlatform }
 func openDeviceManager() error    { return errUnsupportedPlatform }
+
+func collectFlickerDetails(context.Context, time.Time, time.Time) (*FlickerDetails, error) {
+	return nil, errUnsupportedPlatform
+}
+func captureDisplaySample() (DisplaySample, error) { return DisplaySample{}, errUnsupportedPlatform }

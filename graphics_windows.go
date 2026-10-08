@@ -187,8 +187,9 @@ func graphicsMonitors() ([]GraphicsMonitor, error) {
 			if monitor.Flags&1 == 0 {
 				continue
 			}
-			m := GraphicsMonitor{Name: windows.UTF16ToString(monitor.Description[:]), Adapter: windows.UTF16ToString(adapter.Description[:]), AdapterID: windows.UTF16ToString(adapter.ID[:]), Device: name}
+			m := GraphicsMonitor{ID: windows.UTF16ToString(monitor.ID[:]), Name: windows.UTF16ToString(monitor.Description[:]), Adapter: windows.UTF16ToString(adapter.Description[:]), AdapterID: windows.UTF16ToString(adapter.ID[:]), Device: name}
 			if modeOK != 0 {
+				m.X, m.Y, m.Primary, m.ModeKnown = mode.PositionX, mode.PositionY, adapter.Flags&4 != 0, true
 				m.Width = mode.Width
 				m.Height = mode.Height
 				if mode.Frequency > 1 {
@@ -202,4 +203,20 @@ func graphicsMonitors() ([]GraphicsMonitor, error) {
 		return monitors, fmt.Errorf("Monitor paths unavailable; remote sessions or disabled displays may not expose them")
 	}
 	return monitors, nil
+}
+
+//go:embed graphics/comprehensive.ps1
+var flickerDetailsScript string
+
+func collectFlickerDetails(ctx context.Context, start, end time.Time) (*FlickerDetails, error) {
+	script := strings.ReplaceAll(strings.ReplaceAll(flickerDetailsScript, "__START__", start.Format(time.RFC3339)), "__END__", end.Format(time.RFC3339))
+	data, err := graphicsPowerShell(ctx, script)
+	if err != nil {
+		return nil, err
+	}
+	var details FlickerDetails
+	if err := json.Unmarshal(data, &details); err != nil {
+		return nil, err
+	}
+	return &details, nil
 }

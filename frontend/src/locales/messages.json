@@ -1878,5 +1878,225 @@
   "업데이트 확인에 실패했습니다. 업데이트 확인 버튼으로 다시 시도하세요.": {
     "en": "Could not check for updates. Use Check for updates to try again.",
     "ja": "更新を確認できませんでした。「更新を確認」ボタンから再試行してください。"
+  },
+  "깜박임 원인 종합 진단 / 텍스트 저장": {
+    "en": "Comprehensive flicker diagnosis / Save text",
+    "ja": "ちらつきの総合診断 / テキスト保存"
+  },
+  "디스플레이 변경 감시 시작": {
+    "en": "Start display change monitoring",
+    "ja": "ディスプレイ変更の監視を開始"
+  },
+  "감시 종료": {
+    "en": "Monitoring stopped",
+    "ja": "監視終了"
+  },
+  "종합 진단 텍스트 다시 저장": {
+    "en": "Save comprehensive text report again",
+    "ja": "総合診断テキストを再保存"
+  },
+  "감시 중": {
+    "en": "Monitoring",
+    "ja": "監視中"
+  },
+  "변경 기록": {
+    "en": "Recorded changes",
+    "ja": "変更記録"
+  },
+  "복구 이후 증상과 모니터 정보": {
+    "en": "Symptoms after recovery and monitor details",
+    "ja": "復旧後の症状とモニター情報"
+  },
+  "복구 시점·방식": {
+    "en": "Recovery time and method",
+    "ja": "復旧の日時・方法"
+  },
+  "예: 10월 5일, 시스템 복원 또는 DISM/SFC": {
+    "en": "Example: October 5, System Restore or DISM/SFC",
+    "ja": "例：10月5日、システムの復元またはDISM/SFC"
+  },
+  "어느 화면이 깜박이나요?": {
+    "en": "Which screen flickers?",
+    "ja": "どの画面がちらつきますか？"
+  },
+  "좌측": {
+    "en": "Left",
+    "ja": "左側"
+  },
+  "우측": {
+    "en": "Right",
+    "ja": "右側"
+  },
+  "양쪽": {
+    "en": "Both",
+    "ja": "両方"
+  },
+  "양쪽 발생 시점": {
+    "en": "Timing across both screens",
+    "ja": "両画面での発生タイミング"
+  },
+  "동시에": {
+    "en": "At the same time",
+    "ja": "同時"
+  },
+  "각각 불규칙하게": {
+    "en": "Independently and irregularly",
+    "ja": "それぞれ不規則に"
+  },
+  "사용 앱·추가 증상": {
+    "en": "Apps used and additional symptoms",
+    "ja": "使用アプリ・追加の症状"
+  },
+  "CPU·보안 상태와 추가 수집 정보": {
+    "en": "CPU, security status and additional evidence",
+    "ja": "CPU・セキュリティ状態と追加情報"
+  },
+  "디스플레이 변경 기록": {
+    "en": "Display change history",
+    "ja": "ディスプレイ変更履歴"
+  },
+  "주 모니터": {
+    "en": "Primary monitor",
+    "ja": "メインモニター"
+  },
+  "감시는 1초 간격이며 최대 30분 또는 변경 500건까지 기록합니다. 짧은 변화는 놓칠 수 있고 활성 앱이 변경 원인이라는 뜻은 아닙니다. 다시 시작하면 이전 감시 기록이 대체됩니다.": {
+    "en": "Monitoring samples every second, for up to 30 minutes or 500 changes. Brief changes may be missed; the foreground app is not necessarily responsible. Restarting monitoring replaces the previous session.",
+    "ja": "監視は1秒間隔で、最大30分または500件の変更を記録します。短い変化は見逃す場合があり、アクティブなアプリが原因とは限りません。再開すると前回の記録が置き換わります。"
+  },
+  "모니터 좌표는 Windows 배치 기준입니다. 보고서에는 앱·경로·접속 주소 등 시스템 정보가 포함될 수 있습니다.": {
+    "en": "Monitor coordinates use the Windows layout. Reports may contain apps, paths, connection addresses and other system information.",
+    "ja": "モニター座標はWindowsの配置に基づきます。レポートにはアプリ・パス・接続先アドレスなどのシステム情報が含まれる場合があります。"
+  },
+  "CPU 관련 하드웨어 오류 기록": {
+    "en": "CPU-related hardware error record",
+    "ja": "CPU関連のハードウェアエラー記録"
+  },
+  "프로세서가 보고한 오류입니다. CPU·메모리·전원·펌웨어 등을 함께 점검해야 하며 CPU 고장을 확정하지 않습니다.": {
+    "en": "The processor reported this error. Check CPU, memory, power and firmware together; this does not establish a CPU failure.",
+    "ja": "プロセッサが報告したエラーです。CPU・メモリ・電源・ファームウェアなどを併せて確認してください。CPUの故障を断定するものではありません。"
+  },
+  "CPU 원인 판단 근거 부족": {
+    "en": "Insufficient evidence to attribute the issue to the CPU",
+    "ja": "CPUが原因かを判断する根拠が不足"
+  },
+  "CPU 관련 오류를 명확히 식별하지 못했습니다.": {
+    "en": "No clearly identifiable CPU-related error was found.",
+    "ja": "CPU関連のエラーを明確に特定できませんでした。"
+  },
+  "오류 기록이 없어도 정상이라고 확정할 수 없습니다.": {
+    "en": "An absence of error records does not establish normal operation.",
+    "ja": "エラー記録がなくても正常とは断定できません。"
+  },
+  "내장 그래픽 원인 확인 필요": {
+    "en": "Further checks needed for integrated graphics",
+    "ja": "内蔵グラフィックスの原因確認が必要"
+  },
+  "GPU 제조사만으로 내장·외장 여부나 오류 원인을 확정하지 않습니다.": {
+    "en": "The GPU vendor alone cannot establish integrated/discrete classification or the cause.",
+    "ja": "GPUメーカーだけでは内蔵・外付けの区別やエラー原因を断定できません。"
+  },
+  "오류 이벤트의 장치와 모니터 연결 GPU를 비교하세요. 복구 전후 드라이버 변경과 앱의 화면 모드 전환도 확인하세요.": {
+    "en": "Compare the event device with the GPU connected to the monitor. Check driver changes around recovery and app display-mode changes.",
+    "ja": "イベントのデバイスとモニター接続先GPUを比較してください。復旧前後のドライバー変更とアプリの画面モード切替も確認してください。"
+  },
+  "종합 정보 수집 실패": {
+    "en": "Comprehensive collection failed",
+    "ja": "総合情報の収集に失敗"
+  },
+  "CPU·보안 정보가 완전히 수집되지 않았습니다.": {
+    "en": "CPU and security information was not fully collected.",
+    "ja": "CPU・セキュリティ情報を完全には収集できませんでした。"
+  },
+  "수집 제한을 확인하고 다시 검사하세요.": {
+    "en": "Review collection limits and scan again.",
+    "ja": "収集上の制限を確認して再検査してください。"
+  },
+  "방화벽 비활성 프로필 발견": {
+    "en": "Disabled firewall profile found",
+    "ja": "無効なファイアウォールプロファイルを検出"
+  },
+  "현재 네트워크 프로필과 비교하세요. 보안 설정 취약점이며 침입이나 깜박임 원인의 증거는 아닙니다. 관리 정책과 타사 보안 제품을 확인하세요.": {
+    "en": "Compare with the active network category. This is a security configuration concern, not evidence of intrusion or the cause of flicker. Check management policy and third-party security products.",
+    "ja": "現在のネットワークプロファイルと比較してください。セキュリティ設定上の問題であり、侵入やちらつきの原因の証拠ではありません。管理ポリシーと他社製セキュリティ製品を確認してください。"
+  },
+  "Defender 실시간 보호 비활성": {
+    "en": "Defender real-time protection disabled",
+    "ja": "Defenderのリアルタイム保護が無効"
+  },
+  "타사 백신 및 관리 정책을 확인하세요. 이 정보만으로 전체 백신 보호 상태나 감염 여부를 확정할 수 없습니다.": {
+    "en": "Check third-party antivirus and management policy. This alone cannot establish overall antivirus protection or infection.",
+    "ja": "他社製ウイルス対策と管理ポリシーを確認してください。この情報だけでは全体の保護状態や感染の有無は判断できません。"
+  },
+  "원격 접속 관련 단서": {
+    "en": "Remote access clues",
+    "ja": "リモート接続に関連する手掛かり"
+  },
+  "승인된 원격 작업인지 확인하고 발생 시각을 비교하세요. 정상 관리 작업일 수 있으며 침입을 의미하지 않습니다.": {
+    "en": "Check whether the remote activity was authorized and compare timestamps. It may be normal administration and does not establish intrusion.",
+    "ja": "承認されたリモート作業か確認し、時刻を比較してください。通常の管理作業の可能性があり、侵入を意味しません。"
+  },
+  "듀얼 모니터 추가 점검": {
+    "en": "Additional dual-monitor checks",
+    "ja": "デュアルモニターの追加確認"
+  },
+  "자동 수집만으로 케이블·포트·모니터·전원 문제를 판별할 수 없습니다.": {
+    "en": "Automatic collection cannot identify cable, port, monitor or power faults by itself.",
+    "ja": "自動収集だけではケーブル・ポート・モニター・電源の問題を判別できません。"
+  },
+  "디스플레이 변경 감시를 켜고 증상을 재현하세요. 모니터별 주사율, HDR/VRR, 앱 하드웨어 가속을 확인하고 케이블·포트를 교차 점검하세요.": {
+    "en": "Enable display monitoring and reproduce the symptom. Check refresh rates, HDR/VRR, app hardware acceleration, and swap cables/ports to compare.",
+    "ja": "変更監視を開始して症状を再現してください。各モニターのリフレッシュレート、HDR/VRR、アプリのハードウェアアクセラレーションを確認し、ケーブル・ポートを交換して比較してください。"
+  },
+  "진단 답변 형식 또는 길이를 확인해 주세요.": {
+    "en": "Check the format or length of the symptom answers.",
+    "ja": "症状の回答の形式または長さを確認してください。"
+  },
+  "깜박임 원인 종합 진단 저장": {
+    "en": "Save comprehensive flicker diagnosis",
+    "ja": "ちらつきの総合診断を保存"
+  },
+  "종합 진단은 지난 7일을 검사합니다. 감시를 종료한 뒤 텍스트를 다시 저장하면 변경 기록이 포함됩니다.": {
+    "en": "Comprehensive diagnosis scans the last seven days. Save the text report again after stopping monitoring to include the recorded changes.",
+    "ja": "総合診断は過去7日間を検査します。監視終了後にテキストを再保存すると変更記録が含まれます。"
+  },
+  "하드웨어 원인 조사 (읽기 전용)": {
+    "en": "Hardware investigation (read-only)",
+    "ja": "ハードウェア原因調査（読み取り専用）"
+  },
+  "깜박임 발생 시각 (선택, 이 PC의 현지 시각)": {
+    "en": "Flicker time (optional, local time on this PC)",
+    "ja": "ちらつきの発生日時（任意、このPCの現地時刻）"
+  },
+  "모니터별 배선": {
+    "en": "Connections for each monitor",
+    "ja": "モニターごとの接続"
+  },
+  "증상과 동작 상태": {
+    "en": "Symptoms and operating state",
+    "ja": "症状と動作状態"
+  },
+  "하드웨어 조사 / 바탕화면 저장": {
+    "en": "Investigate hardware / Save to Desktop",
+    "ja": "ハードウェア調査 / デスクトップに保存"
+  },
+  "수집 결과 다시 저장": {
+    "en": "Save collected results again",
+    "ja": "収集結果を再保存"
+  },
+  "결과 폴더 열기": {
+    "en": "Open results folder",
+    "ja": "結果フォルダーを開く"
+  },
+  "최근 30일의 시스템 사양과 관련 오류를 조사합니다. 설정 변경·복구·업데이트·재시작 없이 진행하며 CCTV 녹화 파일은 접근하지 않습니다. 결과 3개 파일은 바탕화면의 새 하드웨어진단 폴더에 저장합니다.": {
+    "en": "Collect system specifications and relevant errors from the last 30 days without changing settings, repairing, updating or restarting. CCTV recordings are not accessed. Three Korean reports are saved in a new folder on your Desktop.",
+    "ja": "設定変更・修復・更新・再起動を行わず、システム仕様と過去30日間の関連エラーを調査します。監視カメラ録画にはアクセスしません。韓国語の結果3ファイルをデスクトップの新規フォルダーに保存します。"
+  },
+  "PC 출력 → 변환기 방향/전원 → 모니터 입력; 모르면 미확인": {
+    "en": "PC output → adapter direction/power → monitor input; unknown if unsure",
+    "ja": "PC出力 → 変換器の方向/電源 → モニター入力。不明なら未確認"
+  },
+  "어느 화면/동시 또는 순차/신호 없음/지속 시간/PC·녹화 지속 여부/장기간 전원 차단 후 변화. 개인정보는 입력하지 마세요.": {
+    "en": "Affected screen / simultaneous or sequential / no signal / duration / whether PC and recording continue / changes after prolonged power-off. Do not enter personal information.",
+    "ja": "対象画面/同時か順次か/信号なし/継続時間/PCと録画の継続状態/長時間電源断後の変化。個人情報は入力しないでください。"
   }
 }

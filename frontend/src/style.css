@@ -242,7 +242,7 @@ html[lang="ja"] { font-family: 'Yu Gothic UI', 'Meiryo', 'Segoe UI', sans-serif;
 .graphics-panel summary { cursor: pointer; }
 .graphics-panel pre { max-height: 240px; overflow: auto; padding: 12px; background: #142236; color: #cfe3ff; white-space: pre-wrap; overflow-wrap: anywhere; }
 .graphics-questions label { display: grid; gap: 8px; margin: 14px 0; }
-.graphics-questions select { padding: 8px; font: inherit; max-width: 100%; }
+.graphics-questions select, .graphics-questions input, .graphics-questions textarea { padding: 8px; font: inherit; max-width: 100%; }
 .graphics-status { min-height: 1.7em; }
 
 .developer-info .app-update { margin: 16px 0; padding: 12px; }

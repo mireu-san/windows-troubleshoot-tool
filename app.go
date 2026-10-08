@@ -40,6 +40,11 @@ type commandRunner interface {
 }
 
 type App struct {
+	flickerReport       *GraphicsReport
+	displayWatch        DisplayWatch
+	displayWatchCancel  context.CancelFunc
+	hardwareReport      *HardwareReport
+	hardwareFolder      string
 	graphicsReport      *GraphicsReport
 	graphicsMarker      time.Time
 	languageMu          sync.RWMutex
